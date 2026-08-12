@@ -41,7 +41,8 @@ window.PROGRAM = {
       3: ['primitive', 'regulations', 'reason', 'especially', 'decades', 'purposes', 'significantly', 'survey', 'detect', 'emerge', 'diverse', 'pesticide', 'intensify', 'familiar', 'particularly', 'inadequate', 'drift', 'prevention', 'observation', 'demonstrate', 'compound', 'grow', 'harsh', 'sample', 'discovery'],
       4: ['eliminate', 'link', 'increase', 'outcome', 'reliability', 'heighten', 'gather', 'desert', 'layer', 'plausible', 'contain', 'policy', 'menace', 'save', 'combine', 'obtain', 'fume', 'strict', 'improve', 'determine', 'relatively', 'mild', 'affect', 'currently', 'evaluate'],
       5: ['12 Tenses', 'Yardımcı Fiiller', 'Zaman İfadeleri', 'Karşılaştırmalı Seçim', '50 Soru'],
-      6: ['Tenses + 100 Kelime', 'Cümle Tamamlama', 'Kısa Diyalog', 'Paragraf', 'Hata Bulma', '25 Soru']
+      6: ['Tenses + 100 Kelime', 'Cümle Tamamlama', 'Kısa Diyalog', 'Paragraf', 'Hata Bulma', '25 Soru'],
+      7: ['YDS / YÖKDİL', 'Hedef Kelimeler', 'Tenses', 'Subject–Verb Agreement', '9 Soru Türü', '25 Soru']
     }
   }
 };
