@@ -37,12 +37,12 @@ window.PROGRAM = {
   hazir: {
     1: {
       1: ['necessary', 'occur', 'penetrate', 'supply', 'matter', 'launch', 'influence', 'growth', 'flexibility', 'eventually', 'useful', 'magnify', 'formerly', 'vague', 'enable', 'vanish', 'wilderness', 'enhance', 'celestial', 'extinction', 'gain', 'initially', 'pursue', 'reasonable', 'state'],
-      2: ['prove', 'discard', 'knowledge', 'precaution', 'repair', 'primary', 'reduce', 'disease', 'accessible', 'agriculture', 'annual', 'recommend', 'vary', 'approximately', 'principle', 'monitor', 'scarce', 'fluctuation', 'product', 'invented', 'exceptional', 'illustrate', 'opportunity', 'investigate', 'likelihood'],
-      3: ['primitive', 'regulations', 'reason', 'especially', 'decades', 'purposes', 'significantly', 'survey', 'detect', 'emerge', 'diverse', 'pesticide', 'intensify', 'familiar', 'particularly', 'inadequate', 'drift', 'prevention', 'observation', 'demonstrate', 'compound', 'grow', 'harsh', 'sample', 'discovery'],
+      2: ['prove', 'discard', 'knowledge', 'precaution', 'repair', 'primary', 'reduce', 'disease', 'accessible', 'agriculture', 'annual', 'recommend', 'vary', 'approximately', 'principle', 'monitor', 'scarce', 'fluctuation', 'product', 'invent', 'exceptional', 'illustrate', 'opportunity', 'investigate', 'likelihood'],
+      3: ['primitive', 'regulation', 'reason', 'especially', 'decade', 'purpose', 'significantly', 'survey', 'detect', 'emerge', 'diverse', 'pesticide', 'intensify', 'familiar', 'particularly', 'inadequate', 'drift', 'prevention', 'observation', 'demonstrate', 'compound', 'grow', 'harsh', 'sample', 'discovery'],
       4: ['eliminate', 'link', 'increase', 'outcome', 'reliability', 'heighten', 'gather', 'desert', 'layer', 'plausible', 'contain', 'policy', 'menace', 'save', 'combine', 'obtain', 'fume', 'strict', 'improve', 'determine', 'relatively', 'mild', 'affect', 'currently', 'evaluate'],
-      5: ['12 Tenses', 'Yardımcı Fiiller', 'Zaman İfadeleri', 'Karşılaştırmalı Seçim', '50 Soru'],
-      6: ['Tenses + 100 Kelime', 'Cümle Tamamlama', 'Kısa Diyalog', 'Paragraf', 'Hata Bulma', '25 Soru'],
-      7: ['YDS / YÖKDİL', 'Hedef Kelimeler', 'Tenses', 'Subject–Verb Agreement', '9 Soru Türü', '25 Soru']
+      5: ['12 Tenses', 'Özne–Yüklem Uyumu', 'Yardımcı Fiiller', 'Zaman İfadeleri', 'Karşılaştırmalı Seçim', '50 Soru'],
+      6: ['Tenses + 100 Kelime', 'Cümle Tamamlama', 'Kısa Diyalog', 'Paragraf', 'Hata Bulma', 'Kısa Okuma', '28 Soru'],
+      7: ['YDS / YÖKDİL', 'Gerçek Sınav Seviyesi', '5 Seçenek', 'Süre Takibi', '10 Soru Türü', '25 Soru']
     }
   }
 };
