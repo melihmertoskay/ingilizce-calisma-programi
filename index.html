@@ -135,6 +135,7 @@
   @media(max-width:600px){.wrap{margin-top:7px}header{padding:16px;border-radius:15px}.nav-select{flex-basis:calc(50% - 42px)}.kisim-tip{display:none}}
 </style>
 <script src="data/manifest.js"></script>
+<script src="data/sablon.js"></script>
 </head>
 <body>
 <main class="wrap">
@@ -441,7 +442,7 @@
       .section-title h2{font-size:17px!important}
       .section-title p{font-size:12px!important}
       .card-grid{gap:8px!important;grid-template-columns:repeat(5,minmax(0,1fr))!important}
-      .card{height:210px!important}
+      .card{height:250px!important}
       .card-face{border-radius:12px!important;padding:11px!important}
       .card-word{font-size:16px!important}
       .card-meaning{font-size:13px!important}
@@ -454,8 +455,8 @@
       button.option{border-radius:10px!important;padding:9px 11px!important;min-height:42px!important;font-size:13px!important}
       .feedback{margin-top:9px!important;padding:10px 12px!important;font-size:12.5px!important}
       .tip{font-size:12px!important;margin:16px 3px!important}
-      @media(max-width:700px){.card-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.card{height:190px!important}}
-      @media(max-width:400px){.card-grid{grid-template-columns:1fr!important}.card{height:170px!important}}
+      @media(max-width:700px){.card-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.card{height:230px!important}}
+      @media(max-width:400px){.card-grid{grid-template-columns:1fr!important}.card{height:210px!important}}
     </style>`;
 
   /* Çalışmaların hepsi aynı sınıf ve değişken sözlüğünü kullandığı için
@@ -466,6 +467,7 @@
         --blue:#82b1ff;--green:#2bb387;--green-soft:#123a2c;
         --red:#ef8b95;--red-soft:#3c1f24;--line:#2b3f4d;--yellow:#f2c14e;
         --purple:#c99cf0;--purple-soft:#2e1f3f;
+        --exam:#f29aa5;--exam-soft:#3a1d23;
       }
       :root[data-tema="dark"] .stats{background:#16242ee6!important;border-color:#2b3f4d!important}
       :root[data-tema="dark"] .progress{background:#233542!important}
@@ -481,6 +483,8 @@
       :root[data-tema="dark"] .card-example{color:#b3c6d1!important}
       :root[data-tema="dark"] .card-hint{color:#6d8494!important}
       :root[data-tema="dark"] .card-synonyms,:root[data-tema="dark"] .rule{color:#a9c0cd!important}
+      :root[data-tema="dark"] .card-other{color:#e3ac63!important}
+      :root[data-tema="dark"] .passage b{color:#9dc0ff!important}
       :root[data-tema="dark"] .lesson,:root[data-tema="dark"] .intro,:root[data-tema="dark"] .tense-card{background:#16242e!important;border-color:#2b3f4d!important}
       :root[data-tema="dark"] .lesson-lead,:root[data-tema="dark"] .intro p,:root[data-tema="dark"] .tense-card p{color:#b3c6d1!important}
       :root[data-tema="dark"] .passage{background:#132330!important;border-color:#2b3f4d!important}
