@@ -420,12 +420,313 @@
     ]
   };
 
-  /*@KISIM5@*/
+  /* ==================================================================
+     Kısım 5: Modals konu anlatımı + 50 soru (hedef kelimelerle)
+     ================================================================== */
+  const kisim5 = {
+    baslik: 'Bölüm 2 · 5. Kısım — Modals',
+    sonucBasligi: 'Grammar çalışması tamamlandı!',
+    kuralEtiketi: 'Yapı',
+    soruKaristir: true,
+    intro: '<h2>Modals</h2><p>Önce kısa konu anlatımını oku, sonra soruları çöz. Cümlelerin hepsi Bölüm 2’nin hedef kelimeleriyle kuruldu; doğru cevabı bulduğunda cümlenin Türkçesini de göreceksin.</p><p>Modal yardımcı fiillerin ortak kuralı basit: <b>modal + V1</b> (to yok, -s yok). Anlamı ise modalin “kapısından” seçersin: yetenek, ihtimal, zorunluluk, yasak, çıkarım ya da geçmişe bakış.</p>',
+    tip: 'Puanlama yalnızca ilk seçimine göre yapılır. Yanlış seçimde doğru cevap gösterilmez; açıklamayı okuyup doğruyu bulana kadar deneyebilirsin.',
+    mesajlar: [
+      [90, 'Modalleri çok sağlam öğrenmişsin. Yalnız hata yaptığın birkaç ayrımı gözden geçirmen yeterli.'],
+      [75, 'Temelin iyi. Aşağıdaki tabloda düşük görünen başlıklara kısa bir tekrar yararlı olur.'],
+      [55, 'Ana yapıları tanıyorsun; özellikle geçmiş modaller ve çıkarım (must / can’t) üzerinde biraz daha çalış.'],
+      [0, 'Konu anlatımlarını yeniden okuyup yalnız yanlışları çözerek ilerlemen en verimli yol olur.']
+    ],
+    sections: {
+      ability: {title:'Ability · can, could, be able to', sub:'Yapabilmek: şimdi, geçmişte ve gelecekte',
+        lesson:'<div class="lesson"><p class="lesson-lead"><strong>Modal + V1.</strong> Modalden sonra fiil yalın kalır: <i>can assemble</i>, <i>could read</i>. Modallerin geçmişi, geleceği ve -ing hâli olmadığı için eksik zamanlarda <b>be able to</b> kullanılır.</p><div class="tense-grid"><div class="tense-card"><h3>can</h3><span class="formula">can + V1</span><p>Şimdiki yetenek, genel olasılık.</p><p class="example">Skilled workers can assemble the machine in an hour.</p></div><div class="tense-card"><h3>could</h3><span class="formula">could + V1</span><p>Geçmişteki genel yetenek. Olumsuzu tek bir olayda da kullanılır: couldn’t.</p><p class="example">She could read maps when she was ten.</p></div><div class="tense-card"><h3>was / were able to</h3><span class="formula">was able to + V1</span><p>Geçmişte tek bir olayda başarmak (bir şeyi başarıyla yapabildi).</p><p class="example">After weeks of effort, they were able to repair the engine.</p></div><div class="tense-card"><h3>will be able to · has been able to</h3><span class="formula">will / has + be able to</span><p>Gelecek ve Perfect için can yerine be able to gerekir; will can, has can denmez.</p><p class="example">Farmers will be able to sell their products.</p></div></div></div>'},
+      possibility: {title:'Possibility, Permission & Advice', sub:'may, might, could, can; izin, rica ve öneri',
+        lesson:'<div class="lesson"><p class="lesson-lead"><strong>İhtimal derecesi:</strong> <b>may / might / could</b> “olabilir” (belki, %30–50) anlamı taşır; <b>might</b> biraz daha zayıftır. Olumsuzu <i>may not / might not</i>’tır (<i>can’t</i> değil; o “imkânsız” demektir). <b>can</b> genel olasılık anlatır (<i>Fog can disrupt travel</i>).</p><div class="tense-grid"><div class="tense-card"><h3>İzin ve rica</h3><span class="formula">May / Could / Can + özne + V1?</span><p>May ve Could en kibar biçimlerdir. Yasak ya da izin yoksunluğu: can’t, may not.</p><p class="example">May I use the available computer?</p></div><div class="tense-card"><h3>Öneri</h3><span class="formula">could + V1</span><p>“İstersen … yapabilirsin”; zorunluluk içermeyen öneri.</p><p class="example">You could ask your teacher again.</p></div><div class="tense-card"><h3>Zıtlık</h3><span class="formula">may … but …</span><p>“Olabilir, ama …” biçiminde kabul eden bir ifade kurar.</p><p class="example">The car may look old, but it is efficient.</p></div></div></div>'},
+      obligation: {title:'Obligation & Advice', sub:'must, have to, should, ought to, had better',
+        lesson:'<div class="lesson"><p class="lesson-lead"><strong>Zorunluluk:</strong> <b>must</b> konuşanın ya da kuralın güçlü zorunluluğudur; <b>have to</b> dış gereklilikleri anlatır ve her zamanda kullanılır (<i>had to, will have to, has to</i>). Must’ın geçmişi ve geleceği yoktur; <i>had to</i> ve <i>will have to</i> kullanılır.</p><div class="tense-grid"><div class="tense-card"><h3>should · ought to</h3><span class="formula">should + V1 · ought <b>to</b> + V1</span><p>Tavsiye, doğru olan. Ought’tan sonra to unutulmaz.</p><p class="example">You should cut down on sugar.</p></div><div class="tense-card"><h3>had better</h3><span class="formula">had better + V1</span><p>“… yapsan iyi olur”; yapılmazsa kötü sonuç doğar.</p><p class="example">You had better see a doctor now.</p></div><div class="tense-card"><h3>have to</h3><span class="formula">has / have / had to + V1</span><p>Tekil özne: has to. Soru ve olumsuz: do/does/did.</p><p class="example">A researcher has to obtain permission.</p></div></div></div>'},
+      negative: {title:'Prohibition & No Necessity', sub:'mustn’t ile don’t have to / needn’t aynı şey değildir',
+        lesson:'<div class="lesson"><p class="lesson-lead"><strong>Olumsuzda anlam ayrılır.</strong> <b>mustn’t</b> yasaktır (yapılmaz). <b>don’t have to / needn’t</b> zorunluluk olmadığını söyler (yapılabilir ama gerekmez). <b>shouldn’t</b> ise yapmamanın daha doğru olduğunu belirtir.</p><div class="tense-grid"><div class="tense-card"><h3>mustn’t</h3><p>Yasak, kesin uyarı.</p><p class="example">You mustn’t touch the fragile instruments.</p></div><div class="tense-card"><h3>don’t have to · needn’t</h3><p>Gerek yok. Geçmişi: didn’t have to.</p><p class="example">You don’t have to attend; it is optional.</p></div><div class="tense-card"><h3>shouldn’t</h3><p>Tavsiye edilmez, doğru değil.</p><p class="example">You shouldn’t ignore the warning signs.</p></div></div></div>'},
+      deduction: {title:'Deduction · Present', sub:'must be, can’t be, may / might be, should',
+        lesson:'<div class="lesson"><p class="lesson-lead"><strong>Çıkarım:</strong> Elindeki kanıta bakarak sonuç çıkarırsın. <b>must be</b> “olmalı” (neredeyse kesin), <b>can’t be</b> “olamaz” (neredeyse imkânsız), <b>may / might be</b> “olabilir” (emin değilim). <b>should</b> beklenti anlatır (<i>The system should work well</i>).</p><div class="viewpoint"><strong>Dikkat:</strong> Olumsuz çıkarımda <i>must not</i> değil <b>can’t</b> kullanılır. Süren iş için <i>must be + V-ing</i> kurulur.</div></div>'},
+      past: {title:'Past Modals', sub:'modal + have + V3: geçmiş hakkında yorum',
+        lesson:'<div class="lesson"><p class="lesson-lead"><strong>Geçmişe bakış:</strong> <b>modal + have + V3</b>. Hangi modali seçeceğini “geçmişte ne oldu / olmadı, ben ne düşünüyorum?” sorusu belirler.</p><div class="tense-grid"><div class="tense-card"><h3>should have · ought to have</h3><span class="formula">should have + V3</span><p>Yapılması gerekirdi ama yapılmadı (pişmanlık, eleştiri). Olumsuzu: shouldn’t have.</p><p class="example">They should have repaired the machine.</p></div><div class="tense-card"><h3>must have</h3><span class="formula">must have + V3</span><p>Kanıta dayanan güçlü çıkarım: “…mış olmalı”.</p><p class="example">It must have rained; the streets are wet.</p></div><div class="tense-card"><h3>can’t have</h3><span class="formula">can’t have + V3</span><p>“… olamaz”: geçmiş hakkında neredeyse imkânsız.</p><p class="example">She can’t have written it; she was away.</p></div><div class="tense-card"><h3>may / might have</h3><span class="formula">may have + V3</span><p>Belki de … : emin olmadığın geçmiş ihtimal.</p><p class="example">A component may have failed.</p></div><div class="tense-card"><h3>could have</h3><span class="formula">could have + V3</span><p>Olabilirdi ama olmadı.</p><p class="example">The fire could have taken many lives.</p></div><div class="tense-card"><h3>needn’t have</h3><span class="formula">needn’t have + V3</span><p>Gereksiz yere yapıldı: “yapmasaydık da olurdu”.</p><p class="example">We needn’t have brought so many tools.</p></div></div></div>'},
+      contrast: {title:'Karşılaştırmalı Seçim', sub:'Benzer görünen modaller arasındaki fark',
+        lesson:'<div class="lesson"><p class="lesson-lead"><strong>Önce anlamı belirle:</strong> yetenek mi, ihtimal mi, zorunluluk mu, çıkarım mı? <i>must</i>: zorunluluk ya da güçlü çıkarım; <i>mustn’t</i>: yasak; <i>can’t</i>: çıkarımda “olamaz”. Aynı modal farklı bağlamlarda farklı anlam kazanır; cümledeki ipucuna (kanıt, kural, zaman) bak.</p></div>'}
+    },
+    questions: [
+      /* Ability */
+      {s:'ability',tag:'can + V1',q:'Skilled workers can ___ the whole machine in less than an hour.',tr:'Becerikli işçiler bütün makineyi bir saatten kısa sürede monte edebilir.',o:[
+        ['assemble','Doğru. Modalden sonra fiil yalın kalır: can + V1.'],
+        ['assembles','Modalden sonra fiile -s eklenmez.'],
+        ['assembling','Modalden sonra V-ing gelmez; yalın fiil gerekir.'],
+        ['to assemble','Can’den sonra to kullanılmaz.']],a:0},
+      {s:'ability',tag:'could · geçmişte yetenek',q:'When he was ten years old, he ___ read maps accurately.',tr:'On yaşındayken haritaları doğru biçimde okuyabiliyordu.',o:[
+        ['can','Can şimdiki yeteneği anlatır; “was ten” geçmiştir.'],
+        ['could','Doğru. Geçmişteki genel yetenek could ile anlatılır.'],
+        ['must','Must zorunluluk ya da çıkarım bildirir, yetenek değil.'],
+        ['should','Should tavsiye bildirir, yetenek değil.']],a:1},
+      {s:'ability',tag:'was able to · tek olay',q:'After weeks of effort, the team ___ repair the faulty engine yesterday.',tr:'Haftalarca süren çabadan sonra ekip dün arızalı motoru onarmayı başardı.',o:[
+        ['can','Can geçmiş zaman değildir.'],
+        ['is able to','Is able to şimdiki zamandır; “yesterday” geçmişi gösteriyor.'],
+        ['will be able to','Gelecek anlatır; olay dün gerçekleşti.'],
+        ['was able to','Doğru. Geçmişte tek bir olayda başarmak was able to ile anlatılır (olumlu cümlede could yerine tercih edilir).']],a:3},
+      {s:'ability',tag:'will be able to',q:'If the roads reopen, farmers ___ bring their products to the market.',tr:'Yollar yeniden açılırsa çiftçiler ürünlerini pazara getirebilecek.',o:[
+        ['will be able to','Doğru. Gelecekte yapabilmek: will be able to + V1.'],
+        ['will can','Modal modalden sonra gelmez; will can denmez.'],
+        ['can will','Modallerin sırası bozulamaz; yapı hatalıdır.'],
+        ['will able to','Be eksik: will be able to olmalı.']],a:0},
+      {s:'ability',tag:'couldn’t · geçmişte olumsuz',q:'Last year, despite many attempts, the scientists ___ distinguish the two samples.',tr:'Geçen yıl, birçok girişime rağmen bilim insanları iki numuneyi birbirinden ayırt edemedi.',o:[
+        ['can’t','Can’t şimdiki zamandır; “last year” geçmişi gösteriyor.'],
+        ['couldn’t','Doğru. Geçmişte yapamamak: couldn’t + V1.'],
+        ['mustn’t','Mustn’t yasak bildirir, yetenek eksikliği değil.'],
+        ['won’t be able to','Gelecek anlatır; olay geçen yıl oldu.']],a:1},
+      {s:'ability',tag:'Can ... ? · soru',q:'___ you distinguish red from green on this map?',tr:'Bu haritada kırmızıyı yeşilden ayırt edebiliyor musun?',o:[
+        ['Can','Doğru. Modal sorularda özne önüne geçer: Can + özne + V1?'],
+        ['Do','Do ile soru kurulursa ana fiil V1 olurdu; “Do you can” denmez.'],
+        ['Are','Are ile “able” gerekirdi (Are you able to …).'],
+        ['Must','Must zorunluluk sorar; yetenek sorusu değil.']],a:0},
+      {s:'ability',tag:'has been able to',q:'The agency has not been able to ___ the permit so far.',tr:'Kurum şimdiye kadar izni alamadı.',o:[
+        ['acquire','Doğru. Be able to + V1; Present Perfect’te can yerine has been able to kullanılır.'],
+        ['acquired','Be able to’dan sonra V1 gelir; V2 gelmez.'],
+        ['acquiring','Be able to’dan sonra V-ing gelmez.'],
+        ['to acquire','To zaten “able to” içinde; ikinci bir to gelmez.']],a:0},
+
+      /* Possibility & permission */
+      {s:'possibility',tag:'May I ... ? · kibar rica',q:'Excuse me, ___ I use the available computer for a few minutes?',tr:'Affedersiniz, boştaki bilgisayarı birkaç dakika kullanabilir miyim?',o:[
+        ['must','Must zorunluluk bildirir; izin istemek için kullanılmaz.'],
+        ['may','Doğru. May I ...? izin istemenin kibar yoludur.'],
+        ['ought','Ought tek başına kullanılmaz; ought to gerekir ve anlam da zorunluluktur.'],
+        ['needn’t','Needn’t “gerek yok” demektir; soru kalıbına uymaz.']],a:1},
+      {s:'possibility',tag:'can’t · yasak',q:'Students ___ use phones during the exam; it is against the regulation.',tr:'Öğrenciler sınav sırasında telefon kullanamaz; bu düzenlemeye aykırıdır.',o:[
+        ['can','Can izin bildirirdi; “against the regulation” yasağı gösteriyor.'],
+        ['can’t','Doğru. Kural yasaklıyor: can’t (kurala göre yapılamaz).'],
+        ['needn’t','Needn’t “gerek yok” demektir, yasak değil.'],
+        ['might','Might ihtimal bildirir, yasak değil.']],a:1},
+      {s:'possibility',tag:'may · ihtimal',q:'Heavy precipitation ___ cause floods in the valley this weekend.',tr:'Şiddetli yağış bu hafta sonu vadide sellere yol açabilir.',o:[
+        ['may','Doğru. Gelecekteki olası bir durum için may + V1.'],
+        ['has to','Has to zorunluluk bildirir; yağışın zorunluluğu olmaz.'],
+        ['ought','Ought to gerektirir; ayrıca zorunluluk anlamı verir.'],
+        ['would rather','Would rather tercih bildirir; yapı da uymaz.']],a:0},
+      {s:'possibility',tag:'might · zayıf ihtimal',q:'The condition of the old bridge is poor; it ___ collapse in a storm.',tr:'Eski köprünün durumu kötü; fırtınada çökebilir.',o:[
+        ['need','Need modal olarak yalnız olumsuz/soru kalıplarında kullanılır.'],
+        ['ought','Ought’tan sonra to gerekir.'],
+        ['might','Doğru. Olabilecek bir ihtimal: might + V1.'],
+        ['shall','Shall öneri/teklif için kullanılır; ihtimal bildirmez.']],a:2},
+      {s:'possibility',tag:'might not',q:'Because of the drought, the farmers ___ have enough water this year.',tr:'Kuraklık nedeniyle çiftçilerin bu yıl yeterli suyu olmayabilir.',o:[
+        ['might not','Doğru. Olumsuz ihtimal: might not (yeterli suyu olmayabilir).'],
+        ['mustn’t','Mustn’t yasak bildirir; ihtimal değil.'],
+        ['needn’t','Needn’t gereksizliği anlatır; cümle ise bir ihtimal bildirir.'],
+        ['can’t','Can’t imkânsızlık bildirir; cümle ise sadece olasılıktan söz ediyor.']],a:0},
+      {s:'possibility',tag:'could · genel ihtimal',q:'Extremely high levels of pollution ___ give rise to serious diseases.',tr:'Çok yüksek seviyedeki kirlilik ciddi hastalıklara yol açabilir.',o:[
+        ['could','Doğru. Teorik/genel ihtimal could ile ifade edilir.'],
+        ['did','Did + give: Did’den sonra V1 gelir ama anlam “yol açtı” olur.'],
+        ['are','Are give hatalıdır; edilgen yapı da anlamlı değil.'],
+        ['have','Have + give hatalıdır; have to gerekirdi ve anlam değişirdi.']],a:0},
+      {s:'possibility',tag:'can · genel olasılık',q:'Fog can ___ air travel at any time of the year.',tr:'Sis yılın her zamanında hava ulaşımını aksatabilir.',o:[
+        ['disrupt','Doğru. Can + V1: genel olasılık.'],
+        ['disrupts','Can’den sonra fiil -s almaz.'],
+        ['disrupting','Can’den sonra V-ing gelmez.'],
+        ['to disrupt','Can’den sonra to gelmez.']],a:0},
+      {s:'possibility',tag:'could · öneri',q:'You ___ ask your teacher to explain the task again.',tr:'Öğretmenine görevi yeniden açıklamasını söyleyebilirsin.',o:[
+        ['mustn’t','Mustn’t yasak bildirir.'],
+        ['could','Doğru. Zorunluluk içermeyen öneri: could + V1.'],
+        ['can’t','Can’t yapılamayacağını söyler; cümle öneri veriyor.'],
+        ['needn’t to','Needn’t’ten sonra to gelmez ve anlam da öneri değildir.']],a:1},
+      {s:'possibility',tag:'may … but',q:'The car ___ look old, but its engine is still very efficient.',tr:'Araba eski görünebilir ama motoru hâlâ çok verimli.',o:[
+        ['must','Must burada “mutlaka” anlamı verir; “but” ile birlikte karşıtlık kurmaz.'],
+        ['ought','Ought tek başına kullanılamaz.'],
+        ['shall','Shall öneri/teklif için kullanılır; kabul bildirmez.'],
+        ['may','Doğru. “May … but …” kalıbı bir olasılığı kabul edip karşıt görüşü sunar.']],a:3},
+
+      /* Obligation */
+      {s:'obligation',tag:'must · kural',q:'All workers must ___ protective gloves when they handle hazardous chemicals.',tr:'Tüm işçiler tehlikeli kimyasalları kullanırken koruyucu eldiven giymelidir.',o:[
+        ['wear','Doğru. Must + V1: güçlü zorunluluk.'],
+        ['wears','Modalden sonra fiile -s eklenmez.'],
+        ['wearing','Must’tan sonra V-ing gelmez.'],
+        ['to wear','Must’tan sonra to gelmez.']],a:0},
+      {s:'obligation',tag:'had to · geçmiş zorunluluk',q:'Last week the villagers ___ leave their homes because of the severe flood.',tr:'Geçen hafta köylüler şiddetli sel yüzünden evlerini terk etmek zorunda kaldı.',o:[
+        ['must','Must’ın geçmiş biçimi yoktur.'],
+        ['had to','Doğru. Geçmişte zorunluluk had to ile anlatılır.'],
+        ['should','Should tavsiye bildirir; zorunda kalmayı anlatmaz.'],
+        ['ought to','Ought to tavsiye bildirir; zorunluluk değil.']],a:1},
+      {s:'obligation',tag:'will have to',q:'Next year all students ___ pass a test to meet the new requirement.',tr:'Gelecek yıl yeni gereksinimi karşılamak için tüm öğrencilerin bir sınavı geçmesi gerekecek.',o:[
+        ['will have to','Doğru. Must’ın geleceği yoktur; gelecekte zorunluluk will have to ile verilir.'],
+        ['will must','İki modal yan yana kullanılmaz.'],
+        ['must will','Modallerin sırası ve kullanımı hatalıdır.'],
+        ['are must','Must, be ile birlikte kullanılmaz.']],a:0},
+      {s:'obligation',tag:'should · tavsiye',q:'You ___ cut down on sugar if you are concerned about your health.',tr:'Sağlığın konusunda endişeliysen şekeri azaltmalısın.',o:[
+        ['should','Doğru. Tavsiye: should + V1.'],
+        ['mustn’t','Mustn’t yasak bildirir; cümle tavsiye veriyor.'],
+        ['can’t','Can’t yapamamayı anlatır.'],
+        ['needn’t','Needn’t “gerek yok” demektir; anlam tersine döner.']],a:0},
+      {s:'obligation',tag:'ought to',q:'Governments ___ promote the use of clean energy.',tr:'Hükümetler temiz enerjinin kullanımını teşvik etmelidir.',o:[
+        ['ought to','Doğru. Ought her zaman to ile kullanılır: ought to + V1.'],
+        ['ought','Ought’tan sonra to gerekir.'],
+        ['should to','Should’dan sonra to gelmez.'],
+        ['ought for','Ought for diye bir yapı yoktur.']],a:0},
+      {s:'obligation',tag:'had better',q:'You ___ see a doctor now, because the pain may deteriorate.',tr:'Şimdi bir doktora görünsen iyi olur, çünkü ağrı kötüleşebilir.',o:[
+        ['had better','Doğru. Had better + V1: yapılmazsa kötü sonuç doğabilecek tavsiye.'],
+        ['have better','Had better kalıbı sabittir; have better denmez.'],
+        ['would better','Would better diye bir kalıp yoktur.'],
+        ['had better to','Had better’dan sonra to gelmez.']],a:0},
+      {s:'obligation',tag:'has to · özne uyumu',q:'A researcher ___ obtain permission before using the samples.',tr:'Bir araştırmacı numuneleri kullanmadan önce izin almak zorundadır.',o:[
+        ['have to','Özne tekil (a researcher); has to gerekir.'],
+        ['has to','Doğru. Tekil özne + has to + V1.'],
+        ['having to','Having to bu cümlede ana yüklem olamaz.'],
+        ['must to','Must’tan sonra to gelmez.']],a:1},
+      {s:'obligation',tag:'Do / have to · soru',q:'___ we ___ finish the task today, or can it wait until Monday?',tr:'Görevi bugün bitirmek zorunda mıyız, yoksa pazartesiye kalabilir mi?',o:[
+        ['Do / have to','Doğru. Have to ile soru Do/Does/Did ile kurulur.'],
+        ['Do / must','Do ile must birlikte kullanılmaz.'],
+        ['Must / to','Must’tan sonra to gelmez.'],
+        ['Are / have to','Are yardımcı fiili have to ile kullanılmaz.']],a:0},
+
+      /* Negatives */
+      {s:'negative',tag:'mustn’t · yasak',q:'Visitors ___ touch the fragile instruments in this room.',tr:'Ziyaretçiler bu odadaki hassas aletlere dokunmamalıdır (dokunmak yasaktır).',o:[
+        ['mustn’t','Doğru. Yasak: mustn’t + V1.'],
+        ['needn’t','Needn’t “gerek yok” demektir; dokunmak yasak değil, gereksiz olurdu.'],
+        ['don’t have to','Zorunluluk olmadığını söyler; yasak anlamı vermez.'],
+        ['ought to','Ought to olumlu bir tavsiye bildirir.']],a:0},
+      {s:'negative',tag:'don’t have to',q:'Because the exam is optional, students ___ attend it.',tr:'Sınav isteğe bağlı olduğu için öğrencilerin ona katılması gerekmez.',o:[
+        ['mustn’t','Mustn’t yasak bildirir; sınav ise sadece isteğe bağlı.'],
+        ['don’t have to','Doğru. Zorunluluk yok: don’t have to + V1.'],
+        ['can’t','Can’t yasak/imkânsızlık bildirir; “optional” bu anlama uymaz.'],
+        ['shouldn’t','Shouldn’t katılmamanın daha doğru olduğunu söyler; “optional” bunu gerektirmez.']],a:1},
+      {s:'negative',tag:'mustn’t vs don’t have to',q:'You ___ drive fast in the school area; it is hazardous.',tr:'Okul bölgesinde hızlı araba sürmemelisin; bu tehlikelidir.',o:[
+        ['mustn’t','Doğru. Tehlikeli olduğu için yasak/kesin uyarı: mustn’t.'],
+        ['don’t have to','Zorunluluk olmadığını söyler; tehlike uyarısına uymaz.'],
+        ['needn’t','Needn’t gerek olmadığını söyler; uyarı değildir.'],
+        ['might not','Might not ihtimal bildirir; cümle ise net bir uyarıdır.']],a:0},
+      {s:'negative',tag:'needn’t',q:'We ___ hurry; the meeting has been delayed until noon.',tr:'Acele etmemize gerek yok; toplantı öğlene ertelendi.',o:[
+        ['needn’t','Doğru. Gerek yok: needn’t + V1.'],
+        ['mustn’t','Mustn’t yasak bildirir; acele etmek yasak değil.'],
+        ['can’t','Can’t imkânsızlığı bildirir; cümle gereksizlikten söz ediyor.'],
+        ['must','Must zorunluluk bildirir; bağlam tersini söylüyor.']],a:0},
+      {s:'negative',tag:'shouldn’t · tavsiye',q:'You shouldn’t ___ the warning signs on the road.',tr:'Yoldaki uyarı işaretlerini görmezden gelmemelisin.',o:[
+        ['ignore','Doğru. Shouldn’t + V1: görmezden gelmemek daha doğru olan.'],
+        ['ignores','Modalden sonra fiile -s eklenmez.'],
+        ['ignoring','Shouldn’t’ten sonra V-ing gelmez.'],
+        ['to ignore','Shouldn’t’ten sonra to gelmez.']],a:0},
+      {s:'negative',tag:'didn’t have to',q:'The task was easy, so the students ___ ask for help.',tr:'Görev kolaydı, bu yüzden öğrencilerin yardım istemesine gerek kalmadı.',o:[
+        ['didn’t have to','Doğru. Geçmişte gereksizlik: didn’t have to + V1.'],
+        ['mustn’t','Mustn’t yasak bildirir ve geçmişte kullanılmaz.'],
+        ['hadn’t better','Hadn’t better “yapmasan iyi olur” demektir; geçmişte gereksizlik anlatmaz.'],
+        ['didn’t must','Must ile did kullanılmaz.']],a:0},
+
+      /* Deduction */
+      {s:'deduction',tag:'must be · çıkarım',q:'Look at the enormous cloud of smoke. There ___ a fire nearby.',tr:'Şu devasa duman bulutuna bak. Yakınlarda bir yangın olmalı.',o:[
+        ['must be','Doğru. Kanıt (duman bulutu) → neredeyse kesin çıkarım: must be.'],
+        ['can’t be','Can’t be “olamaz” demektir; kanıt tersini gösteriyor.'],
+        ['needn’t be','Needn’t be gerek olmadığını söyler; çıkarım değildir.'],
+        ['mustn’t be','Mustn’t be bir yasaktır; çıkarım için can’t be kullanılır.']],a:0},
+      {s:'deduction',tag:'can’t be · çıkarım',q:'The patient left the hospital after a full recovery, so his condition ___ severe now.',tr:'Hasta tamamen iyileşerek hastaneden ayrıldı, bu yüzden şimdi durumu ağır olamaz.',o:[
+        ['can’t be','Doğru. Kanıt bu ihtimali dışlıyor: can’t be (olamaz).'],
+        ['must be','Must be “ağır olmalı” demek olurdu; kanıt tersini söylüyor.'],
+        ['has to be','“Ağır olmak zorunda” anlamı verir, kanıtla çelişir.'],
+        ['ought to be','Ought to be tavsiye/beklenti bildirir; çıkarım yapmaz.']],a:0},
+      {s:'deduction',tag:'might be',q:'I am not sure, but the plant ___ poisonous, so we had better not touch it.',tr:'Emin değilim ama bitki zehirli olabilir, bu yüzden dokunmasak iyi olur.',o:[
+        ['might be','Doğru. Emin olunmayan ihtimal: might be.'],
+        ['must be','Must be kesinliğe yakın bir çıkarımdır; “I am not sure” ile uyuşmaz.'],
+        ['can’t be','Can’t be “zehirli olamaz” der; ardından gelen uyarıyla çelişir.'],
+        ['needn’t be','Needn’t be gerek olmadığını anlatır; ihtimal bildirmez.']],a:0},
+      {s:'deduction',tag:'must be + V-ing',q:'The lights are still on, so the scientists ___ working on the task.',tr:'Işıklar hâlâ yanıyor, demek ki bilim insanları görev üzerinde çalışıyor olmalı.',o:[
+        ['must be','Doğru. Süren bir iş hakkında çıkarım: must be + V-ing.'],
+        ['need be','Need be modal yapısı bu bağlamda doğal değildir.'],
+        ['ought be','Ought’tan sonra to gerekir; ayrıca anlam çıkarım değildir.'],
+        ['shall be','Shall öneri/teklif için kullanılır; çıkarım bildirmez.']],a:0},
+      {s:'deduction',tag:'should · beklenti',q:'The new system ___ work well; the engineers have tested it for a year.',tr:'Yeni sistem iyi çalışmalı; mühendisler onu bir yıl boyunca test etti.',o:[
+        ['should','Doğru. Should + V1 mantıklı beklenti anlatabilir: “iyi çalışması gerekir/çalışacağı beklenir”.'],
+        ['can’t','Can’t “çalışamaz” demektir; test süreciyle çelişir.'],
+        ['mustn’t','Mustn’t yasak bildirir.'],
+        ['needn’t','Needn’t gerek olmadığını söyler.']],a:0},
+
+      /* Past modals */
+      {s:'past',tag:'should have + V3',q:'The workers ___ the faulty machine before the accident, but they neglected it.',tr:'İşçiler kazadan önce arızalı makineyi onarmalıydı ama onu ihmal ettiler.',o:[
+        ['should have repaired','Doğru. Yapılması gerekirdi ama yapılmadı: should have + V3.'],
+        ['should repair','Should repair şimdiki/gelecek tavsiyesidir; olay geçmişte.'],
+        ['should repaired','Should’dan sonra V2 gelmez; have + V3 gerekir.'],
+        ['should be repaired','Edilgen yapıdır ve eylemi yapanın ihmaline işaret etmez.']],a:0},
+      {s:'past',tag:'shouldn’t have + V3',q:'He ___ so much sugar; now his condition has deteriorated.',tr:'O kadar çok şeker yememeliydi; şimdi durumu kötüleşti.',o:[
+        ['shouldn’t have eaten','Doğru. Yapılmaması gerekirdi ama yapıldı: shouldn’t have + V3.'],
+        ['shouldn’t eat','Şimdiki/gelecek tavsiyesidir; olay geçmişte oldu.'],
+        ['mustn’t eat','Mustn’t yasaktır ve geçmişi anlatmaz.'],
+        ['can’t have eaten','Can’t have eaten “yemiş olamaz” demek olurdu; yemiş olduğu belli.']],a:0},
+      {s:'past',tag:'must have + V3',q:'A large amount of precipitation ___ during the night; the streets are flooded.',tr:'Gece boyunca çok yağış düşmüş olmalı; sokakları su basmış.',o:[
+        ['must have fallen','Doğru. Kanıt (sular altındaki sokaklar) → geçmiş hakkında güçlü çıkarım: must have + V3.'],
+        ['must fall','Şimdiki/gelecek zaman çıkarımıdır; olay gece yaşandı.'],
+        ['should fall','Beklenti anlatır; geçmişi anlatmaz.'],
+        ['can’t have fallen','“Düşmemiş olamaz” olmaz; kanıt tersini gösteriyor.']],a:0},
+      {s:'past',tag:'can’t have + V3',q:'She was in another city that day, so she ___ the report.',tr:'O gün başka bir şehirdeydi, bu yüzden raporu yazmış olamaz.',o:[
+        ['can’t have written','Doğru. Kanıt bu ihtimali dışlıyor: can’t have + V3.'],
+        ['must have written','“Yazmış olmalı” demek olurdu; kanıt tersini gösteriyor.'],
+        ['needn’t have written','Gereksiz yere yazılmasını anlatır; çıkarım yapmaz.'],
+        ['may not write','Şimdiki/gelecek ihtimalidir; geçmişi anlatmaz.']],a:0},
+      {s:'past',tag:'may have + V3',q:'The engine stopped suddenly. A faulty component ___ the problem.',tr:'Motor aniden durdu. Arızalı bir parça soruna yol açmış olabilir.',o:[
+        ['may have caused','Doğru. Emin olunmayan geçmiş ihtimal: may have + V3.'],
+        ['may cause','Şimdiki/gelecek ihtimalidir; motor zaten durdu.'],
+        ['may has caused','May’den sonra has gelmez; have gerekir.'],
+        ['must caused','Must’tan sonra V2 gelmez; ayrıca yapı hatalıdır.']],a:0},
+      {s:'past',tag:'could have + V3',q:'The fire was very severe. It ___ many lives, but fortunately everyone escaped.',tr:'Yangın çok şiddetliydi. Birçok can alabilirdi ama neyse ki herkes kurtuldu.',o:[
+        ['could have taken','Doğru. Olabilirdi ama olmadı: could have + V3.'],
+        ['could take','Şimdiki/gelecek ihtimalidir; olay geçmişte kaldı.'],
+        ['could has taken','Could’dan sonra has gelmez; have gerekir.'],
+        ['can have taken','Can have + V3 çıkarım için nadir ve yaygın değildir; “olabilirdi ama olmadı” anlamını vermez.']],a:0},
+      {s:'past',tag:'needn’t have + V3',q:'We ___ so many tools; the task took only ten minutes.',tr:'O kadar çok alet getirmemize gerek yokmuş; görev yalnızca on dakika sürdü.',o:[
+        ['needn’t have brought','Doğru. Gereksiz yere yapıldı: needn’t have + V3.'],
+        ['needn’t bring','Şimdiki/gelecek gereksizliğidir; olay geçmişte oldu.'],
+        ['mustn’t have brought','Mustn’t have kalıbı doğal değildir; gereksizlik için needn’t have kullanılır.'],
+        ['didn’t need bring','Didn’t need’den sonra to gerekir (didn’t need to bring).']],a:0},
+      {s:'past',tag:'ought to have + V3',q:'Governments ___ action earlier to prevent the outbreak of the disease.',tr:'Hükümetler hastalığın baş göstermesini önlemek için daha erken harekete geçmeliydi.',o:[
+        ['ought to have taken','Doğru. Yapılması gerekirdi ama yapılmadı: ought to have + V3.'],
+        ['ought have taken','Ought’tan sonra to gerekir.'],
+        ['ought to has taken','Have kullanılmalı; has hatalıdır.'],
+        ['should to have taken','Should’dan sonra to gelmez.']],a:0},
+      {s:'past',tag:'must have been',q:'He was late; the traffic ___ terrible.',tr:'Geç kaldı; trafik korkunç olmuş olmalı.',o:[
+        ['must have been','Doğru. Geçmiş hakkında çıkarım: must have been.'],
+        ['must be','Şimdiki zaman çıkarımıdır; olay geçmişte oldu.'],
+        ['had must','Must’ın had biçimi yoktur.'],
+        ['must been','Have eksik: must have been olmalı.']],a:0},
+      {s:'past',tag:'must have been + V-ing',q:'The lights were on all night; the researchers ___ working on the task.',tr:'Işıklar bütün gece yanıyordu; araştırmacılar görev üzerinde çalışıyor olmalıydı.',o:[
+        ['must have been','Doğru. Geçmişte süren iş hakkında çıkarım: must have been + V-ing.'],
+        ['must have','Must have’den sonra V-ing gelmez; been gerekir.'],
+        ['must be','Şimdiki zaman çıkarımıdır; olay geçmişte oldu.'],
+        ['should be','Beklenti anlatır ve zaman şimdiki zamandır.']],a:0},
+
+      {s:'past',tag:'might not have + V3',q:'The results are inconsistent. The team ___ the samples accurately.',tr:'Sonuçlar tutarsız. Ekip numuneleri doğru biçimde ölçmemiş olabilir.',o:[
+        ['might not have measured','Doğru. Emin olunmayan olumsuz geçmiş ihtimal: might not have + V3.'],
+        ['might not measure','Şimdiki/gelecek ihtimalidir; ölçüm geçmişte yapıldı.'],
+        ['might have not to measure','Yapı hatalıdır; have + V3 gerekir.'],
+        ['needn’t have measured','Gereksiz yere ölçülmesini anlatır; ihtimal bildirmez.']],a:0},
+
+      /* Contrasts */
+      {s:'contrast',tag:'must · kural',q:'It is a school regulation: all students ___ wear a uniform.',tr:'Bu bir okul kuralı: bütün öğrenciler üniforma giymek zorundadır.',o:[
+        ['must','Doğru. Kural/yasa kaynaklı zorunluluk: must + V1.'],
+        ['might','Might ihtimal bildirir; kural zorunluluğuyla uyuşmaz.'],
+        ['could','Could öneri/olasılık anlatır; kural zorunluluğu değil.'],
+        ['may','May ihtimal ya da izin bildirir; kuralın zorunluluğunu anlatmaz.']],a:0},
+      {s:'contrast',tag:'can’t vs mustn’t',q:'That ___ be the correct answer; it is obvious that the calculation contains a mistake.',tr:'Bu doğru cevap olamaz; hesaplamada bir hata olduğu apaçık ortada.',o:[
+        ['can’t','Doğru. Çıkarımda “olamaz” anlamı için can’t be kullanılır.'],
+        ['mustn’t','Mustn’t yasak bildirir; çıkarım yapmaz.'],
+        ['needn’t','Needn’t gerek olmadığını söyler; çıkarım değildir.'],
+        ['don’t have to','Zorunluluk olmadığını söyler; çıkarım yapmaz.']],a:0},
+      {s:'contrast',tag:'had to vs must have',q:'Last year the company ___ pay a fine because it released poisonous gas into the river.',tr:'Geçen yıl şirket nehre zehirli gaz saldığı için ceza ödemek zorunda kaldı.',o:[
+        ['had to','Doğru. Geçmişte zorunluluk: had to + V1.'],
+        ['must','Must’ın geçmiş biçimi yoktur.'],
+        ['ought','Ought’tan sonra to gerekir ve anlam zorunluluk değildir.'],
+        ['could','Could “yapabilirdi” anlamı verirdi; ceza ödemek zorunluluktu.']],a:0},
+      {s:'contrast',tag:'Karma çıkarım',q:'A: Why is the road closed?\nB: There ___ an accident. I saw smoke and several ambulances.',tr:'A: Yol neden kapalı? B: Bir kaza olmuş olmalı. Duman ve birkaç ambulans gördüm.',o:[
+        ['must have been','Doğru. Kanıt var (duman, ambulans); geçmişte olan bir olay hakkında çıkarım: must have been.'],
+        ['can’t have been','“Olamaz” anlamı verir; kanıt tersini söylüyor.'],
+        ['needn’t have been','Needn’t have been gereksiz yere olduğunu anlatır; çıkarım değildir.'],
+        ['should be','Şimdiki beklentidir; olay geçmişte oldu.']],a:0}
+    ]
+  };
+
+  /*@KISIM6@*/
 
   window.registerBolum(2, {
     1: () => S.kelimeKismi({bolum:2, kisim:1, words:kelimeler[1]}),
     2: () => S.kelimeKismi({bolum:2, kisim:2, words:kelimeler[2]}),
     3: () => S.kelimeKismi({bolum:2, kisim:3, words:kelimeler[3]}),
-    4: () => S.kelimeKismi({bolum:2, kisim:4, words:kelimeler[4]})
+    4: () => S.kelimeKismi({bolum:2, kisim:4, words:kelimeler[4]}),
+    5: () => S.testKismi(kisim5)
   });
 })();
