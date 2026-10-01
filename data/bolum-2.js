@@ -720,13 +720,402 @@
     ]
   };
 
-  /*@KISIM6@*/
+  /* ==================================================================
+     Kısım 6: Modals + 100 kelime karma çalışma (öğretici)
+     ================================================================== */
+  const kisim6 = {
+    baslik: 'Bölüm 2 · 6. Kısım — Modals + 100 Hedef Kelime',
+    sonucBasligi: 'Karma çalışma tamamlandı!',
+    kuralEtiketi: 'Grammar',
+    soruKaristir: true,
+    sabitBolumler: ['paragraph', 'error', 'reading'],
+    intro: '<h2>Grammar + Hedef Kelimeler</h2><p>Bu çalışma 101–200 arasındaki hedef kelimeleri doğal bağlamlarda tekrar ederken doğru modali seçmeni ister. Yalnız modalin kendisine değil; cümledeki ipucuna (kanıt, kural, zaman, tavsiye) ve cümlenin anlamına da dikkat et.</p><p>Sonda kısa bir okuma parçası var. Sınavdaki okuma sorularına ilk adım: parçalar ilerleyen bölümlerde yavaş yavaş uzayacak.</p>',
+    mesajlar: [
+      [90, 'Kelime ve modal ilişkisini çok güçlü kuruyorsun. 7. kısma geçebilirsin.'],
+      [75, 'İyi gidiyor. Yanlış yaptığın modal ayrımlarına kısa bir tekrar yap.'],
+      [55, 'Temel sağlamlaşıyor; özellikle çıkarım (must / can’t) ve geçmiş modalleri yeniden incele.'],
+      [0, 'Önce 5. kısımdaki anlatımı, sonra yanlış sorulardaki açıklamaları tekrar etmen yararlı olur.']
+    ],
+    sections: {
+      sentence: {title:'Cümle Tamamlama', sub:'Modalin anlamını ve zamanını birlikte değerlendir.'},
+      dialogue: {title:'Kısa Diyaloglar', sub:'Konuşma bağlamının gerektirdiği modali seç.'},
+      paragraph: {title:'Paragraf Boşluk Doldurma', sub:'Aynı metindeki anlam akışını beş boşluk boyunca koru.',
+        passage:'The village has suffered from a severe <mark>drought</mark> for three years. Last summer, families <b>[1]</b> ___ walk ten kilometers to find <mark>available</mark> water. Now engineers have built an <mark>irrigation</mark> system, so farmers <b>[2]</b> ___ water their fields again. However, the authorities <b>[3]</b> ___ have acted earlier, because the <mark>consequence</mark> of the delay was a serious <mark>shortage</mark> of food. Next week, technicians will <mark>assemble</mark> new pumps, but heavy rain <b>[4]</b> ___ <mark>delay</mark> their arrival. Whatever happens, the villagers <b>[5]</b> ___ <mark>ignore</mark> the water rules.'},
+      error: {title:'Hata Bulma', sub:'Altı çizili dört bölümden grammar hatası taşıyanı seç.'},
+      meaning: {title:'Anlam ve Modal İlişkisi', sub:'Verilen durumu en doğru ve doğal biçimde anlatan cümleyi bul.', tekSutun:true},
+      reading: {title:'Kısa Okuma', sub:'Parçayı oku; soruları parçadaki bilgiye dayanarak cevapla.', tekSutun:true,
+        passage:'For years, the residents of a small mountain town have been <mark>concerned</mark> about the river that <mark>provides</mark> their water. In the past decade, the flow has <mark>decreased</mark> <mark>gradually</mark>, and last summer a severe <mark>drought</mark> made the situation worse. Experts say that a <mark>lack of</mark> <mark>precipitation</mark> may not be the only cause; the old pipes might <mark>release</mark> large amounts of water before it reaches the houses. Engineers must <mark>focus on</mark> repairing the system first. The town council cannot <mark>ignore</mark> the problem any longer. It should have acted earlier, but it still has time to <mark>protect</mark> the river’s future.'}
+    },
+    questions: [
+      /* Cümle tamamlama */
+      {s:'sentence',focus:'severe · aid',q:'Because the road was blocked by a severe storm, the rescue team ___ deliver aid, so the villagers ___ wait another day.',tr:'Yol şiddetli bir fırtına yüzünden kapandığı için kurtarma ekibi yardım ulaştıramadı, bu yüzden köylüler bir gün daha beklemek zorunda kaldı.',o:[
+        ['couldn’t / had to','Doğru. Geçmişte yapamama: couldn’t; geçmişte zorunda kalma: had to.'],
+        ['can’t / have to','İkisi de şimdiki zamandır; olay geçmişte yaşandı.'],
+        ['couldn’t / must','Must’ın geçmiş biçimi yoktur; had to gerekir.'],
+        ['mustn’t / had to','Mustn’t yasak bildirir, yapamamayı değil.']],a:0,rule:'Geçmişte yapamama: couldn’t · geçmişte zorunluluk: had to'},
+      {s:'sentence',focus:'drought · cut down on · shortage · serious',q:'Since the drought is expected to continue, farmers ___ cut down on water use; otherwise the shortage ___ become even more serious.',tr:'Kuraklığın süreceği beklendiğinden çiftçilerin su kullanımını azaltması gerekiyor; aksi takdirde kıtlık daha da ciddi hâle gelebilir.',o:[
+        ['have to / may','Doğru. İlki zorunluluk (have to), ikincisi olası bir risk (may).'],
+        ['needn’t / must','Needn’t gereksizliği anlatır; durum ise tersini gerektiriyor.'],
+        ['have to / can’t','Can’t imkânsızlık bildirir; kıtlığın ciddileşmesi ise olası bir sonuç.'],
+        ['mustn’t / could have','Mustn’t yasak bildirir; could have ise geçmişe aittir.']],a:0,rule:'Zorunluluk: have to · olası sonuç: may'},
+      {s:'sentence',focus:'fragile · damage · ignore',q:'The fragile equipment was damaged during transport. The workers ___ it more carefully, but they ignored the instructions.',tr:'Hassas ekipman taşıma sırasında zarar gördü. İşçiler onu daha dikkatli taşımalıydı ama talimatları görmezden geldiler.',o:[
+        ['should have handled','Doğru. Yapılması gerekirdi ama yapılmadı: should have + V3.'],
+        ['should handle','Şimdiki/gelecek tavsiyesidir; olay geçmişte oldu.'],
+        ['must have handled','“Taşımış olmalı” çıkarımıdır; talimatları görmezden geldikleri belli.'],
+        ['can’t have handled','“Taşımış olamaz” demek olurdu; cümle ise eleştiri bildiriyor.']],a:0,rule:'Geçmişte yapılmayan gereklilik: should have + V3'},
+      {s:'sentence',focus:'ignition · faulty · component',q:'The engine does not respond when the driver turns the key, so the ignition component ___ be faulty.',tr:'Sürücü anahtarı çevirdiğinde motor tepki vermiyor, bu yüzden ateşleme parçası arızalı olmalı.',o:[
+        ['must','Doğru. Kanıt (motor tepki vermiyor) → güçlü çıkarım: must be.'],
+        ['can’t','Can’t be “arızalı olamaz” demektir; kanıt tersini gösteriyor.'],
+        ['needn’t','Needn’t be gerek olmadığını söyler; çıkarım yapmaz.'],
+        ['shouldn’t','Shouldn’t be “arızalı olmamalı” anlamı verirdi; kanıt tersini gösteriyor.']],a:0,rule:'Kanıta dayanan güçlü çıkarım: must be'},
+      {s:'sentence',focus:'available · confine · exposure',q:'Since the report is already available online, you ___ print it, but you ___ share it with outsiders; it is confidential.',tr:'Rapor zaten çevrim içi erişilebilir olduğundan onu yazdırmana gerek yok ama dışarıdakilerle paylaşmamalısın; gizli.',o:[
+        ['don’t have to / mustn’t','Doğru. Yazdırmak zorunlu değil (don’t have to); paylaşmak yasak (mustn’t).'],
+        ['mustn’t / don’t have to','Anlamlar ters yerleşmiş: yasak ile gereksizlik karışmış.'],
+        ['needn’t / needn’t','İkinci boşluktaki gizlilik bir yasak ister; needn’t yetersizdir.'],
+        ['can’t / needn’t','Çevrim içi olması nedeniyle yazdırmak yasak değil; ikinci boşlukta da gereksizlik değil yasak gerekir.']],a:0,rule:'don’t have to = gerek yok · mustn’t = yasak'},
+      {s:'sentence',focus:'outbreak · prevent · disease · rapid',q:'The outbreak of the disease spread rapidly, but the clinic reacted in time. Without its quick response, the disease ___ many more people.',tr:'Hastalık hızla yayıldı ama klinik zamanında müdahale etti. Onun hızlı tepkisi olmasaydı hastalık çok daha fazla insana bulaşabilirdi.',o:[
+        ['could have infected','Doğru. Olabilirdi ama olmadı: could have + V3.'],
+        ['must have infected','“Bulaştırmış olmalı” çıkarımıdır; cümle ise gerçekleşmeyen bir ihtimali anlatıyor.'],
+        ['needn’t have infected','Gereksizlik anlatır; ihtimal anlatmaz.'],
+        ['should have infected','“Bulaştırması gerekirdi” demek olurdu; anlam bozulur.']],a:0,rule:'Gerçekleşmeyen geçmiş ihtimal: could have + V3'},
+      {s:'sentence',focus:'inconsistent · component · fail',q:'The data are inconsistent; one of the instruments ___ during the experiment.',tr:'Veriler tutarsız; deney sırasında aletlerden biri arızalanmış olabilir.',o:[
+        ['may have failed','Doğru. Emin olunmayan geçmiş ihtimal: may have + V3.'],
+        ['may fail','Şimdiki/gelecek ihtimalidir; deney geçmişte yapıldı.'],
+        ['may has failed','May’den sonra have gelir; has hatalıdır.'],
+        ['needn’t have failed','Gereksizlik anlatır; ihtimal anlatmaz.']],a:0,rule:'Emin olunmayan geçmiş: may / might have + V3'},
+      {s:'sentence',focus:'consensus · tremendous · effort',q:'Despite a tremendous effort, the committee ___ reach a consensus yet.',tr:'Muazzam bir çabaya rağmen komite henüz bir fikir birliğine varamadı.',o:[
+        ['hasn’t been able to','Doğru. “Yet” ile Perfect gerekir; can yerine has been able to kullanılır.'],
+        ['hasn’t could','Modal can/could Perfect yapıda has ile kullanılmaz.'],
+        ['can’t been able to','İki yapı birbirine karışmış; hatalıdır.'],
+        ['won’t have been able to','Gelecekteki son tarihe kadar yapamamış olmayı anlatır; “yet” ile uyuşmaz.']],a:0,rule:'Present Perfect + can: has / have been able to'},
+
+      /* Diyalog */
+      {s:'dialogue',focus:'focus on · task',q:'A: Why are you so tired?\nB: I ___ up so late last night. Now I cannot focus on the task.',tr:'A: Neden bu kadar yorgunsun? B: Dün gece o kadar geç saate kadar uyanık kalmamalıydım. Şimdi görevime odaklanamıyorum.',o:[
+        ['shouldn’t have stayed','Doğru. Yapılmaması gerekirdi ama yapıldı: shouldn’t have + V3.'],
+        ['shouldn’t stay','Şimdiki/gelecek tavsiyesidir; olay dün gece oldu.'],
+        ['mustn’t have stayed','Mustn’t have kalıbı doğal değildir; pişmanlık için shouldn’t have kullanılır.'],
+        ['can’t have stayed','“Kalmış olamaz” demek olurdu; B kendi yaptığını anlatıyor.']],a:0,rule:'Geçmişe pişmanlık: shouldn’t have + V3'},
+      {s:'dialogue',focus:'hazardous · enter',q:'A: Do I have to wear a helmet in this area?\nB: Yes, it is hazardous. You ___ enter without one.',tr:'A: Bu bölgede kask takmak zorunda mıyım? B: Evet, burası tehlikeli. Kasksız girmemelisin (yasak).',o:[
+        ['mustn’t','Doğru. Tehlike nedeniyle yasak: mustn’t.'],
+        ['needn’t','Needn’t gerek olmadığını söyler; B’nin cevabı “Evet” diyor.'],
+        ['don’t have to','Zorunluluk olmadığını söyler; B’nin cevabıyla çelişir.'],
+        ['might not','Olasılık bildirir; B kesin bir kural anlatıyor.']],a:0,rule:'Yasak: mustn’t'},
+      {s:'dialogue',focus:'majority · obvious',q:'A: Where is the manager? Her car is in the car park.\nB: She ___ be in the building. Let’s check the meeting room.',tr:'A: Müdür nerede? Arabası otoparkta. B: Binada olmalı. Toplantı odasına bakalım.',o:[
+        ['must','Doğru. Kanıt (arabası otoparkta) → güçlü çıkarım: must be.'],
+        ['can’t','Can’t be “binada olamaz” der; B’nin devamıyla çelişir.'],
+        ['mustn’t','Mustn’t yasak bildirir; çıkarım için can’t kullanılır.'],
+        ['needn’t','Needn’t gerek olmadığını söyler.']],a:0,rule:'Kanıt varsa güçlü çıkarım: must be'},
+      {s:'dialogue',focus:'available · condition',q:'A: ___ I leave the samples here until tomorrow?\nB: Yes, you may. The room is available all night.',tr:'A: Numuneleri yarına kadar burada bırakabilir miyim? B: Evet, bırakabilirsin. Oda bütün gece boş.',o:[
+        ['May','Doğru. İzin isteme: May I ...?'],
+        ['Must','Must zorunluluk sorar; B’nin cevabı (“you may”) izin veriyor.'],
+        ['Ought','Ought’tan sonra to gerekir.'],
+        ['Had','Had burada soru yapısı kuramaz.']],a:0,rule:'İzin isteme: May I ... ?'},
+
+      /* Paragraf */
+      {s:'paragraph',focus:'available · drought',q:'Paragraftaki [1] numaralı boşluk için en uygun seçenek hangisidir?',tr:'Geçen yaz aileler kullanılabilir su bulmak için on kilometre yürümek zorunda kaldı.',o:[
+        ['had to','Doğru. Geçmişte dış koşulların getirdiği zorunluluk: had to.'],
+        ['must','Must’ın geçmiş biçimi yoktur.'],
+        ['should','Tavsiye bildirir; zorunda kalmayı anlatmaz.'],
+        ['may','İhtimal bildirir; cümle gerçek bir zorunluluğu anlatıyor.']],a:0,rule:'Geçmişte zorunluluk: had to'},
+      {s:'paragraph',focus:'irrigation',q:'Paragraftaki [2] numaralı boşluk için en uygun seçenek hangisidir?',tr:'Artık mühendisler bir sulama sistemi kurdu, bu yüzden çiftçiler tarlalarını yeniden sulayabilir.',o:[
+        ['can','Doğru. Artık yapabilme imkânı vardır: can + V1.'],
+        ['could have','Geçmişte gerçekleşmeyen ihtimali anlatır.'],
+        ['must have','Geçmiş hakkında çıkarım yapar.'],
+        ['had to','Geçmişte zorunluluğu anlatır; cümle şimdiki imkândan söz ediyor.']],a:0,rule:'Şimdiki yetenek/imkân: can'},
+      {s:'paragraph',focus:'consequence · shortage',q:'Paragraftaki [3] numaralı boşluk için en uygun seçenek hangisidir?',tr:'Ancak yetkililer daha erken harekete geçmeliydi, çünkü gecikmenin sonucu ciddi bir gıda sıkıntısı oldu.',o:[
+        ['should','Doğru. Should have + V3: yapılması gerekirdi ama yapılmadı.'],
+        ['must','Must have acted: “harekete geçmiş olmalı” çıkarımıdır; metin tersini söylüyor.'],
+        ['can’t','Can’t have acted: “harekete geçmiş olamaz” çıkarımıdır; cümle eleştiri içeriyor.'],
+        ['needn’t','Needn’t have acted: gereksiz yere harekete geçtiklerini söyler; gecikmenin sonucu bunu desteklemez.']],a:0,rule:'Geçmişte yapılmayan gereklilik: should have + V3'},
+      {s:'paragraph',focus:'assemble · delay',q:'Paragraftaki [4] numaralı boşluk için en uygun seçenek hangisidir?',tr:'Gelecek hafta teknisyenler yeni pompaları monte edecek ama şiddetli yağmur onların gelişini geciktirebilir.',o:[
+        ['may','Doğru. Gelecekteki olası bir engel: may + V1.'],
+        ['ought','Ought’tan sonra to gerekir.'],
+        ['needn’t','Needn’t gereksizliği anlatır; cümlede olası bir engel anlatılıyor.'],
+        ['mustn’t','Yasak bildirir; yağmurun yasaklanması söz konusu olamaz.']],a:0,rule:'Olası gelecek durum: may / might + V1'},
+      {s:'paragraph',focus:'ignore',q:'Paragraftaki [5] numaralı boşluk için en uygun seçenek hangisidir?',tr:'Ne olursa olsun köylüler su kurallarını görmezden gelmemeli (görmezden gelmek yasaktır).',o:[
+        ['mustn’t','Doğru. Kural gereği yasak: mustn’t.'],
+        ['don’t have to','Zorunluluk olmadığını söyler; “kuralları görmezden gelmek zorunda değiller” anlamsızdır.'],
+        ['needn’t','Gereksizliği anlatır; yasak anlamı vermez.'],
+        ['may','İhtimal bildirir; “whatever happens” kesin bir tutum ister.']],a:0,rule:'Yasak: mustn’t'},
+
+      /* Hata bulma */
+      {s:'error',sabit:true,focus:'consensus · delay',q:'The committee [[could not]] reach a consensus, so the members [[had to delayed]] the meeting [[until]] [[the following Monday]].\nHatalı bölüm hangisidir?',tr:'Komite bir fikir birliğine varamadı, bu yüzden üyeler toplantıyı ertelemek zorunda kaldı.',o:[
+        ['could not','Geçmişte yapamama could not ile doğru anlatılmış.'],
+        ['had to delayed','Doğru seçim. Had to’dan sonra yalın fiil gelir: had to delay.'],
+        ['until','“Until + zaman”: -e kadar; doğru kullanılmış.'],
+        ['the following Monday','Zaman ifadesi doğrudur.']],a:1,rule:'had to + V1'},
+      {s:'error',sabit:true,focus:'condition · deteriorate · severe',q:'You [[ought see]] a doctor [[at once]] if your condition [[deteriorates]] and the pain [[becomes]] severe.\nHatalı bölüm hangisidir?',tr:'Durumun kötüleşirse ve ağrı şiddetlenirse hemen bir doktora görünmelisin.',o:[
+        ['ought see','Doğru seçim. Ought her zaman to ile kullanılır: ought to see.'],
+        ['at once','“At once” (hemen) doğru bir kullanımdır.'],
+        ['deteriorates','If yan cümlesinde Present Simple doğrudur.'],
+        ['becomes','If yan cümlesinde Present Simple doğrudur.']],a:0,rule:'ought to + V1'},
+      {s:'error',sabit:true,focus:'inconsistent · faulty',q:'The data are inconsistent, so the instrument [[may be]] faulty, and the engineers [[should have checking]] it [[before]] the experiment [[began]].\nHatalı bölüm hangisidir?',tr:'Veriler tutarsız, bu yüzden alet arızalı olabilir ve mühendisler onu deney başlamadan önce kontrol etmeliydi.',o:[
+        ['may be','May be + sıfat: şimdiki ihtimal için doğrudur.'],
+        ['should have checking','Doğru seçim. Should have’den sonra V3 gelir: should have checked.'],
+        ['before','“Before” doğru bir bağlaç olarak kullanılmış.'],
+        ['began','“Before” yan cümlesinde Past Simple doğrudur.']],a:1,rule:'should have + V3'},
+      {s:'error',sabit:true,focus:'requirement · sample',q:'A researcher [[have to]] obtain permission [[before]] she [[can]] use [[the samples]].\nHatalı bölüm hangisidir?',tr:'Bir araştırmacı numuneleri kullanabilmek için önce izin almak zorundadır.',o:[
+        ['have to','Doğru seçim. Özne tekil (a researcher) olduğu için has to gerekir.'],
+        ['before','“Before” doğru bir bağlaç olarak kullanılmış.'],
+        ['can','Can + V1 yapabilmeyi anlatır; doğrudur.'],
+        ['the samples','Belirli numuneler için the doğrudur.']],a:0,rule:'Tekil özne + has to'},
+
+      /* Anlam ve modal ilişkisi */
+      {s:'meaning',focus:'discover · prevent',q:'Dün kimse kapıyı kilitlememiş; birinin içeri girmiş olma ihtimali var. Bu durumu en doğal anlatan cümle hangisidir?',o:[
+        ['Someone may have entered the building.','Doğru. Emin olunmayan geçmiş ihtimal: may have + V3.'],
+        ['Someone may enter the building.','Şimdiki/gelecek ihtimali anlatır; olay dün gece oldu.'],
+        ['Someone can’t have entered the building.','“Girmiş olamaz” demek olurdu; kapının kilitsiz olması bunun tersini düşündürür.'],
+        ['Someone needn’t have entered the building.','“Girmesine gerek yoktu” anlamı verir; ihtimal anlatmaz.']],a:0,rule:'Emin olunmayan geçmiş: may have + V3'},
+      {s:'meaning',focus:'requirement · attempt',q:'“Toplantıya katılmak zorunda değilsin ama istersen gelebilirsin.” cümlesinin en doğru İngilizcesi hangisidir?',o:[
+        ['You don’t have to attend the meeting, but you can come if you want.','Doğru. Zorunluluk yok (don’t have to); isteğe bağlı izin (can).'],
+        ['You mustn’t attend the meeting, but you can come if you want.','Mustn’t yasak bildirir; cümle ise zorunluluğun olmadığını söylüyor.'],
+        ['You can’t attend the meeting, but you needn’t come if you want.','Can’t yasak bildirir; ayrıca cümle kendi içinde çelişiyor.'],
+        ['You shouldn’t have attended the meeting, but you can come if you want.','Geçmişe pişmanlık bildirir; cümle şimdiki bir durumu anlatıyor.']],a:0,rule:'don’t have to = zorunlu değil'},
+      {s:'meaning',focus:'remarkable · trait · experienced',q:'“Rapor çok dikkatli yazılmış; yazarı bu konuda çok deneyimli olmalı.” cümlesinin en doğru İngilizcesi hangisidir?',o:[
+        ['The author must be very experienced in this field.','Doğru. Kanıta dayanan güçlü çıkarım: must be.'],
+        ['The author can’t be very experienced in this field.','“Deneyimli olamaz” demek olurdu; kanıt tersini gösteriyor.'],
+        ['The author needn’t be very experienced in this field.','“Deneyimli olması gerekmez” anlamı verir; çıkarım değildir.'],
+        ['The author may have been very experienced in this field.','Geçmiş zaman ve zayıf ihtimal anlatır; cümle kesin bir çıkarım ve şimdiki durum içeriyor.']],a:0,rule:'Kanıta dayanan güçlü çıkarım: must be'},
+      {s:'meaning',focus:'fail · simple · task',q:'“Bu kadar basit bir görevde başarısız olmuş olması imkânsız.” cümlesinin en doğru İngilizcesi hangisidir?',o:[
+        ['He can’t have failed such a simple task.','Doğru. Geçmiş hakkında “olamaz”: can’t have + V3.'],
+        ['He mustn’t fail such a simple task.','Mustn’t yasak bildirir ve geçmişi anlatmaz.'],
+        ['He shouldn’t have failed such a simple task.','“Başarısız olmamalıydı” (eleştiri) anlamı verir; cümle imkânsızlıktan söz ediyor.'],
+        ['He needn’t have failed such a simple task.','“Başarısız olmasına gerek yoktu” anlamı verir; cümle imkânsızlık anlatır.']],a:0,rule:'Geçmişte imkânsızlık: can’t have + V3'},
+
+      /* Kısa okuma */
+      {s:'reading',focus:'concerned · decrease · provide',q:'Parçanın ana konusu nedir?',o:[
+        ['Bir dağ kasabasının suyunu sağlayan nehrin zamanla azalması ve bunun nedenlerinin araştırılması','Doğru. Parça baştan sona nehrin gitgide azalmasını ve olası nedenlerini anlatıyor.'],
+        ['Dağ kasabasında turizmin gelişmesi','Parçada turizmden söz edilmiyor.'],
+        ['Yeni bir barajın nasıl inşa edildiği','Parçada baraj inşasından söz edilmiyor.'],
+        ['Kasaba halkının başka bir bölgeye göç etmesi','Parçada göçten söz edilmiyor.']],a:0,rule:'Ana fikir sorularında tek bir cümleye değil, parçanın bütününe bak.'},
+      {s:'reading',focus:'release · lack of · precipitation',q:'Parçaya göre uzmanlar, su kaybının nedeni olarak neyi düşünüyor?',o:[
+        ['Yağış azlığının tek neden olmayabileceğini, eski boruların da çok su kaybettirmiş olabileceğini','Doğru. “A lack of precipitation may not be the only cause; the old pipes might release large amounts of water.”'],
+        ['Yağışın hiç azalmadığını','Parçada yağış azlığının nedenlerden biri olabileceği söyleniyor.'],
+        ['Sadece kuraklığın nedeni olduğunu','Parça “not the only cause” diyor; tek neden değil.'],
+        ['Borularda hiçbir sorun olmadığını','Parça eski boruların su kaybettiriyor olabileceğini söylüyor.']],a:0,rule:'may not be the only cause = tek neden olmayabilir. “Only” gibi kesinlik bildiren sözcüklere dikkat et.'},
+      {s:'reading',focus:'ignore · protect · focus on',q:'Parçaya göre kasaba meclisi hakkında hangisi söylenebilir?',o:[
+        ['Daha erken harekete geçmeliydi ama nehrin geleceğini korumak için hâlâ zamanı var.','Doğru. “It should have acted earlier, but it still has time to protect the river’s future.”'],
+        ['Sorunu tamamen çözmüştür.','Parçada sorunun çözüldüğüne dair bilgi yok.'],
+        ['Mühendislerin çalışmasını yasaklamıştır.','Parçada mühendislere engel olunduğundan söz edilmiyor.'],
+        ['Sorunu daha önce fark etmiş ve çözmüştür.','“Should have acted earlier” erken davranılmadığını gösterir.']],a:0,rule:'should have + V3 = yapılmayan gereklilik (eleştiri). “but still” ise umudun sürdüğünü gösterir.'}
+    ]
+  };
+
+  /* ==================================================================
+     Kısım 7: YDS / YÖKDİL mini denemesi — gerçek sınav seviyesi
+     Bütün seçenekler dilbilgisi bakımından kurallıdır; doğru cevap
+     anlam, zaman ilişkisi ve mantıkla bulunur.
+     ================================================================== */
+  const kisim7 = {
+    baslik: 'Bölüm 2 · 7. Kısım — YDS / YÖKDİL Mini Denemesi',
+    sonucBasligi: 'Mini deneme tamamlandı!',
+    kuralEtiketi: 'Not',
+    soruKaristir: false,
+    tekSutun: true,
+    sure: 56,
+    intro: '<h2>YDS / YÖKDİL Mini Denemesi</h2><p>Bu kısım <b>gerçek sınav seviyesindedir</b>: 5 seçenek var ve seçeneklerin hepsi dilbilgisi açısından doğrudur. Doğru cevabı yalnızca anlam, zaman ilişkisi ve mantık belirler. Metinlerde hedef kelimelerin yanında başka akademik kelimeler de geçer; gerçek sınavda da öyledir.</p><p>Bu denemeyi Bölüm 1’deki denemenle karşılaştırarak ilerleyişini izleyebilirsin. Zorlanman normal; açıklamaları okuyup yanlışları yeniden çözmek puanı yükseltir.</p><p><b>Yalnız YDS</b> etiketli soru türleri (diyalog, yakın anlam) YÖKDİL’de çıkmaz. Üstteki sayaç gerçek sınav temposunu gösterir (soru başına yaklaşık 2 dakika 15 saniye); süre dolsa da çalışma durmaz.</p>',
+    tip: 'Puanlama yalnızca ilk seçimine göre yapılır. Gerçek sınav hissi için önce kendi cevabına karar ver, sonra tıkla; yanlışsa açıklamayı okuyup yeniden deneyebilirsin.',
+    mesajlar: [
+      [85, 'Bu mini denemede 85+ düzeyindesin. Bölüm 2’nin konularında sınava hazırsın!'],
+      [70, 'Güçlü bir sonuç. Bölüm 2’nin kelime ve modal sorularında sınav seviyesine çok yakınsın.'],
+      [50, 'İyi bir başlangıç. Aşağıdaki tabloda düşük görünen soru türlerinin açıklamalarını okuyup yanlışları yeniden çöz.'],
+      [0, 'Bu kısım gerçek sınav zorluğunda; zorlanmak çok normal. Açıklamaları okuyup yanlışları yeniden çöz, sonraki bölümlerde bu puan yükselecek.']
+    ],
+    sections: {
+      vocabulary: {title:'Kelime Bilgisi', instructions:'Cümlede boş bırakılan yere uygun düşen sözcüğü bulunuz.'},
+      grammar: {title:'Dilbilgisi', instructions:'Cümlede boş bırakılan yerlere uygun düşen sözcük veya ifadeyi bulunuz.'},
+      cloze: {title:'Cloze Test', instructions:'Aşağıdaki parçada numaralanmış yerlere uygun düşen sözcük veya ifadeyi bulunuz.',
+        passage:'Agriculture uses about seventy percent of the fresh water consumed worldwide, yet much of it is wasted. Traditional irrigation, in which whole fields are flooded, is highly inefficient, since a <b>(1)</b> ______ amount of the water evaporates before it reaches the roots. Until the 1990s, most farmers <b>(2)</b> ______ depend entirely on rainfall, which was often inconsistent. Today, engineers have developed systems that deliver water drop by drop, and these are far more <b>(3)</b> ______. Small farmers, however, cannot always afford them, so the <b>(4)</b> ______ of them still rely on flooding. If governments want to protect food production, they <b>(5)</b> ______ support these farmers before a serious shortage of water develops.'},
+      completion: {title:'Cümle Tamamlama', instructions:'Verilen cümleyi uygun şekilde tamamlayan ifadeyi bulunuz.'},
+      translation: {title:'Çeviri', instructions:'Verilen cümleye anlamca en yakın çeviriyi bulunuz.'},
+      paragraph: {title:'Paragraf Tamamlama', instructions:'Boş bırakılan yere, parçanın anlam bütünlüğünü sağlamak için getirilebilecek cümleyi bulunuz.'},
+      irrelevant: {title:'Anlam Bütünlüğünü Bozan Cümle', instructions:'Okunduğunda anlam bütünlüğünü bozan cümleyi bulunuz.'},
+      dialogue: {title:'Diyalog Tamamlama', badge:'Yalnız YDS', instructions:'Verilen konuşmada boş bırakılan yere uygun düşebilecek ifadeyi bulunuz.'},
+      restatement: {title:'Yakın Anlamlı Cümle', badge:'Yalnız YDS', instructions:'Verilen cümleye anlamca en yakın cümleyi bulunuz.'},
+      reading: {title:'Okuma Parçası', instructions:'Soruları aşağıdaki parçaya göre cevaplayınız.',
+        passage:'Wetlands, which include marshes, swamps and peat bogs, cover only about six percent of the Earth’s land surface, yet they play a tremendous role in regulating the environment. They absorb heavy precipitation like giant sponges and release the water gradually, which reduces the risk of floods. They also filter pollution from the water that passes through them, so cities located downstream receive cleaner supplies. Moreover, wetlands are home to a rich biodiversity: many species of birds, fish and insects could not exist without them. Despite these benefits, wetlands have long been regarded as useless land. Over the last century, more than half of the world’s wetlands have been drained to provide space for agriculture and housing. The consequences have been serious. In regions where wetlands have disappeared, floods have become more severe, and the quality of drinking water has deteriorated. Many scientists now argue that governments ought to protect the remaining wetlands and that damaged ones should be restored where possible. They add that the cost of restoration is small compared with the damage that would otherwise occur.'}
+    },
+    questions: [
+      /* Kelime bilgisi */
+      {s:'vocabulary',focus:'hazardous',q:'Workers who handle ---- substances must wear protective clothing at all times, since even brief contact with them can cause serious injury.',tr:'Tehlikeli maddelerle çalışan işçiler, kısa süreli temas bile ciddi yaralanmaya yol açabileceği için her zaman koruyucu giysi giymek zorundadır.',o:[
+        ['plentiful','Plentiful = bol; koruyucu giysi gerektiren bir özellik değildir.'],
+        ['fragile','Fragile = kırılgan; temasın yaralanmaya yol açması maddenin kırılganlığıyla açıklanmaz.'],
+        ['previous','Previous = önceki; cümlenin mantığıyla ilgisi yoktur.'],
+        ['hazardous','Doğru. Hazardous = tehlikeli; koruyucu giysi ve yaralanma riski bu anlamı gerektiriyor.'],
+        ['moderate','Moderate = ılımlı; koruyucu giysi zorunluluğu ılımlı maddeler için gerekmez.']],a:3,rule:'Cümledeki sonuç (koruyucu giysi, yaralanma) boşluğa gelecek sıfatın olumsuz bir anlam taşıdığını gösterir.'},
+      {s:'vocabulary',focus:'promote',q:'The new law is intended to ---- the use of renewable energy by offering tax reductions to companies that invest in it.',tr:'Yeni yasa, yenilenebilir enerjiye yatırım yapan şirketlere vergi indirimi sunarak bu enerjinin kullanımını teşvik etmeyi amaçlıyor.',o:[
+        ['neglect','Neglect = ihmal etmek; vergi indirimi sunmak ihmal etmeyi değil, teşviki anlatır.'],
+        ['cease','Cease = son vermek; teşvik edici bir yasanın amacı kullanımı bitirmek olmaz.'],
+        ['delay','Delay = ertelemek; vergi indirimi kullanımı ertelemeye hizmet etmez.'],
+        ['confine','Confine = sınırlamak; teşvik edilen bir şeyi sınırlamak mantıksızdır.'],
+        ['promote','Doğru. Promote = teşvik etmek; vergi indirimi bu amacı destekler.']],a:4,rule:'“intended to” ve “offering tax reductions” ifadeleri olumlu bir amaç gösterir; olumsuz anlamlı fiilleri ele.'},
+      {s:'vocabulary',focus:'gradually',q:'The glacier has been melting ---- for decades, so the change is hard to notice from one year to the next.',tr:'Buzul on yıllardır yavaş yavaş eriyor, bu yüzden değişiklik bir yıldan diğerine fark edilmesi zor.',o:[
+        ['accurately','Accurately = doğru biçimde; erime hızını değil, ölçümün doğruluğunu anlatırdı.'],
+        ['solely','Solely = yalnızca; cümlenin ilişkisini kurmaz.'],
+        ['entirely','Entirely = tamamen; “değişim fark edilmiyor” ile çelişir.'],
+        ['indefinitely','Indefinitely = süresiz olarak; “for decades” zaten belli bir süreyi gösteriyor.'],
+        ['gradually','Doğru. Gradually = yavaş yavaş; “hard to notice” yavaşlığa işaret eder.']],a:4,rule:'“hard to notice from year to year” ipucu: değişim çok yavaş.'},
+      {s:'vocabulary',focus:'shortage',q:'Experts warn that a ---- of clean water in many regions could lead to serious conflicts within the next generation.',tr:'Uzmanlar, birçok bölgedeki temiz su kıtlığının gelecek nesil içinde ciddi çatışmalara yol açabileceği konusunda uyarıyor.',o:[
+        ['trait','Trait = özellik; suyun “özelliği” çatışmaya yol açma ilişkisini kurmaz.'],
+        ['alignment','Alignment = hizalama; anlam uymaz.'],
+        ['wreck','Wreck = enkaz; “a wreck of clean water” anlamsızdır.'],
+        ['shortage','Doğru. a shortage of clean water = temiz su kıtlığı; çatışma riski ile uyumlu.'],
+        ['component','Component = parça; “a component of clean water” bu cümlenin mantığına uymaz.']],a:3,rule:'a ---- of + sayılamayan isim kalıbı: shortage / lack / supply gibi miktar ifadeleri aranır.'},
+
+      /* Dilbilgisi */
+      {s:'grammar',focus:'fail · poor · perfect',q:'The experiment ---- failed because of poor equipment; the instruments were checked afterwards and found to be in perfect condition.',tr:'Deney kötü ekipman yüzünden başarısız olmuş olamaz; aletler sonradan kontrol edildi ve mükemmel durumda bulundu.',o:[
+        ['must have','Must have failed “başarısız olmuş olmalı” der; kanıt (mükemmel alet) tersini gösteriyor.'],
+        ['may have','May have failed bir ihtimal bildirir; ama kanıt bu ihtimali dışlıyor.'],
+        ['should have','Should have failed “başarısız olmalıydı” anlamı verir; bağlamla uyuşmaz.'],
+        ['needn’t have','Needn’t have failed “başarısız olmasına gerek yoktu” demektir; bağlam bir çıkarım gerektiriyor.'],
+        ['can’t have','Doğru. Kanıt (aletler mükemmeldi) bu nedeni dışlıyor: can’t have + V3 (olmuş olamaz).']],a:4,rule:'Kanıt bir ihtimali dışlıyorsa: can’t have + V3'},
+      {s:'grammar',focus:'requirement · optional',q:'Since the trial period is over, the employees ---- wear safety equipment any longer, though many of them still choose to.',tr:'Deneme süresi bittiği için çalışanların artık güvenlik ekipmanı giymesi gerekmiyor, ancak birçoğu hâlâ giymeyi tercih ediyor.',o:[
+        ['mustn’t','Mustn’t yasak bildirir; “many still choose to” ile çelişir.'],
+        ['can’t','Can’t yasak/imkânsızlık bildirir; hâlâ giyenler olması bunu desteklemez.'],
+        ['don’t have to','Doğru. Zorunluluk sona erdi ama giymek serbest: don’t have to.'],
+        ['shouldn’t','Shouldn’t giymemenin doğru olduğunu söyler; “choose to” ile uyuşmaz.'],
+        ['couldn’t','Couldn’t geçmişte yapamamayı anlatır; “any longer” şimdiki durumu gösteriyor.']],a:2,rule:'Zorunluluğun sona ermesi ≠ yasak: don’t have to ile mustn’t’ı ayır.'},
+      {s:'grammar',focus:'severe · bridge · damage',q:'The bridge was built to last a century, yet the storm was so severe that it ---- collapsed; luckily, only the old railing was damaged.',tr:'Köprü bir asır dayanacak şekilde yapılmıştı, ancak fırtına o kadar şiddetliydi ki çökebilirdi; neyse ki yalnızca eski korkuluk zarar gördü.',o:[
+        ['must have','Must have collapsed “çökmüş olmalı” der; köprünün ayakta kaldığı belli.'],
+        ['could have','Doğru. Olabilirdi ama olmadı: could have + V3.'],
+        ['can’t have','Can’t have collapsed “çökmüş olamaz” der; “so severe that” vurgusuyla uyuşmaz.'],
+        ['needn’t have','Needn’t have collapsed “çökmesine gerek yoktu” demektir; anlam uymaz.'],
+        ['ought to have','Ought to have collapsed “çökmesi gerekirdi” anlamı verir; mantık uymaz.']],a:1,rule:'“Luckily, only … was damaged” gerçekleşmeyen bir ihtimali gösterir: could have + V3'},
+
+      /* Cloze */
+      {s:'cloze',focus:'tremendous',q:'Parçadaki (1) numaralı boşluğa uygun düşen ifade hangisidir?',o:[
+        ['fragile','Fragile = kırılgan; “amount” (miktar) için kullanılmaz.'],
+        ['faulty','Faulty = arızalı; “amount” ile kullanılmaz.'],
+        ['notorious','Notorious = kötü ünlü; miktarı niteleyemez.'],
+        ['previous','Previous = önceki; “since” ile kurulan neden bağlantısına uymaz.'],
+        ['tremendous','Doğru. a tremendous amount of water = çok büyük miktarda su; “highly inefficient” ile uyumlu.']],a:4,rule:'Miktar belirten isimlerden önce amount/number niteleyicileri aranır: tremendous, enormous, large.'},
+      {s:'cloze',focus:'requirement · rainfall',q:'Parçadaki (2) numaralı boşluğa uygun düşen ifade hangisidir?',o:[
+        ['have to','“Until the 1990s” geçmişi gösterir; have to şimdiki zamandır.'],
+        ['had to','Doğru. “Until the 1990s” geçmişi gösterir; bu zorunluluk geçmişe aittir: had to depend.'],
+        ['must','Must’ın geçmiş biçimi yoktur; geçmiş zorunluluk had to ile verilir.'],
+        ['ought to','Ought to tavsiye bildirir; çiftçilerin yağmura bağımlı olması bir tavsiye değil zorunluluktu.'],
+        ['may','May ihtimal bildirir; “most farmers” genel bir durumu anlatıyor.']],a:1,rule:'Until + geçmiş tarih → geçmişte zorunluluk: had to'},
+      {s:'cloze',focus:'efficient',q:'Parçadaki (3) numaralı boşluğa uygun düşen ifade hangisidir?',o:[
+        ['plentiful','Plentiful = bol; sistemlerin “bol” olması karşılaştırmayla (far more) kurulamaz.'],
+        ['poisonous','Poisonous = zehirli; sistemleri övmek yerine olumsuz bir anlam verir.'],
+        ['lunar','Lunar = Ay’a ait; anlam uymaz.'],
+        ['deadly','Deadly = öldürücü; anlam uymaz.'],
+        ['efficient','Doğru. far more efficient than flooding: damla sulama su israfını azalttığı için daha verimli.']],a:4,rule:'Önceki cümle “highly inefficient” diyor; sonraki cümlede zıt kavram (efficient) beklenir.'},
+      {s:'cloze',focus:'majority',q:'Parçadaki (4) numaralı boşluğa uygun düşen ifade hangisidir?',o:[
+        ['consensus','Consensus = fikir birliği; “the ---- of them still rely” yapısına uymaz.'],
+        ['incidence','Incidence = görülme sıklığı; hastalık ve olaylar için kullanılır.'],
+        ['majority','Doğru. the majority of them = onların çoğunluğu; “cannot always afford” ile uyumlu.'],
+        ['exposure','Exposure = maruz kalma; anlam uymaz.'],
+        ['impact','Impact = etki; “of them” ile birlikte anlam kurmaz.']],a:2,rule:'the majority of + çoğul isim/zamir = çoğunluk'},
+      {s:'cloze',focus:'protect',q:'Parçadaki (5) numaralı boşluğa uygun düşen ifade hangisidir?',o:[
+        ['can’t','Can’t “destekleyemez” der; “If governments want to protect …” ile mantık kurmaz.'],
+        ['mustn’t','Mustn’t yasak bildirir; amaç cümlesiyle uyuşmaz.'],
+        ['should','Doğru. If governments want to protect … they should support: amaçtan çıkan tavsiye.'],
+        ['needn’t','Needn’t gerek olmadığını söyler; mantık tersine döner.'],
+        ['might not','Might not “desteklemeyebilir” der; amaç cümlesiyle çelişir.']],a:2,rule:'If … want to + amaç → ana cümlede tavsiye/gereklilik: should'},
+
+      /* Cümle tamamlama */
+      {s:'completion',focus:'condition · collapse',q:'Because the old bridge is now in a very poor condition, ----.',o:[
+        ['it has attracted tremendous numbers of tourists for decades','Because ile bir sonuç beklenir; turist sayısı köprünün kötü durumunun sonucu değildir.'],
+        ['engineers say they will have to close it before it collapses','Doğru. Kötü durumun sonucu: kapatmak zorunda kalacaklar; will have to + V1.'],
+        ['the river below it is famous for its biodiversity','Neden-sonuç ilişkisi kurmaz.'],
+        ['officials can’t have been aware of the latest tourism figures','Köprünün durumuyla mantıksal bağ kurmaz.'],
+        ['local shops could have opened earlier this year','Kötü durumun sonucu olarak anlamlı değildir.']],a:1,rule:'Because ile başlayan yan cümlenin ardından o nedenin doğal sonucu gelmelidir.'},
+      {s:'completion',focus:'drought · irrigation',q:'Even though the drought lasted for three years, ----.',o:[
+        ['the shortage of water forced many families to leave the area','Even though ile karşıtlık beklenir; bu seçenek kuraklığın doğal sonucunu anlatır, karşıtlık kurmaz.'],
+        ['farmers were able to harvest enough crops thanks to the new irrigation system','Doğru. Beklenmedik bir sonuç: kuraklığa rağmen yeterli hasat. Karşıtlık kurar.'],
+        ['the consequence was a rapid decrease in the harvest','Kuraklığın doğal sonucudur; karşıtlık yoktur.'],
+        ['the villagers had to cut down on water use','Kuraklığın beklenen sonucudur; karşıtlık yoktur.'],
+        ['rainfall remained far below average','Kuraklığı açıklar; karşıtlık yoktur.']],a:1,rule:'Even though / although → iki yarı arasında beklenmedik bir zıtlık olmalı.'},
+      {s:'completion',focus:'precipitation · rapid · release',q:'Heavy precipitation has made the river rise rapidly, so ----.',o:[
+        ['the drought is expected to end gradually over the next decade','Hızlı yükselen nehir ile uzun vadeli bir kuraklık bitişi arasında bağ yoktur.'],
+        ['the lunar eclipse will be visible at midnight','Konuyla ilgisi yoktur.'],
+        ['the factory has released poisonous gas into the air','Nehrin yükselmesinin sonucu olarak anlamlı değildir.'],
+        ['residents of the lower valley had better leave their homes before dark','Doğru. Nehir hızla yükseliyor; sonuç olarak tahliye tavsiyesi: had better + V1.'],
+        ['farmers can’t have used irrigation this year','Nehrin yükselmesinin sonucu değildir.']],a:3,rule:'so → önceki cümlenin mantıksal sonucu beklenir.'},
+
+      /* Çeviri */
+      {s:'translation',focus:'fail · inconsistent · attempt · consequence',q:'The team should have recognized that the data were inconsistent before they attempted to publish their results, since even a slight error could have given rise to serious consequences.',o:[
+        ['Ekip, verilerin tutarsız olduğunu fark etmiş olmalı ve sonuçlarını yayımlamaya çalışmadan önce çok ciddi sonuçlar doğurabilecek hatayı düzeltmiş olmalı.','Should have “fark etmeliydi” demektir; “fark etmiş olmalı” çıkarımı anlam değiştirir.'],
+        ['Ekip, sonuçlarını yayımlamaya çalışmadan önce verilerin tutarsız olduğunu fark etmeliydi, çünkü küçük bir hata bile ciddi sonuçlara yol açabilirdi.','Doğru. should have recognized → fark etmeliydi; could have given rise to → yol açabilirdi.'],
+        ['Ekip, verilerin tutarsız olduğunu fark edince sonuçlarını yayımlamaktan vazgeçti, çünkü küçük bir hata bile ciddi sonuçlar doğurmuştur.','Kaynakta vazgeçme yok; modal anlamı ve zaman kaybolmuş.'],
+        ['Ekip, küçük bir hatanın ciddi sonuçlara yol açacağını bildiği için verilerin tutarsız olduğunu hemen fark edebildi.','Neden-sonuç tersine çevrilmiş; should have anlamı kaybolmuş.'],
+        ['Ekibin verileri tutarsız bulması gerekmiyordu, çünkü küçük bir hata bile ciddi sonuçlara yol açmazdı.','Needn’t anlamı eklenmiş; kaynak tersini söylüyor.']],a:1,rule:'should have + V3 = “-meliydi” (yapılmadı); could have + V3 = “-abilirdi” (olmadı)'},
+      {s:'translation',focus:'drought · crop · provide · aid',q:'Kuraklık yüzünden çiftçilerin bu yıl ürünlerinin çoğunu kaybetmiş olmaları muhtemel; bu nedenle hükümet acil yardım sağlamak zorunda kalacak.',o:[
+        ['The farmers must have lost most of their crops this year because of the drought; therefore, the government should provide emergency aid.','Must have kesin çıkarım yapar; “muhtemel” için may/might uygundur. “Zorunda kalacak” da should provide değildir.'],
+        ['The farmers can’t have lost most of their crops this year because of the drought; therefore, the government has to provide emergency aid.','Can’t have “kaybetmiş olamaz” der; kaynakta tersi vardır.'],
+        ['The farmers may have lost most of their crops this year because of the drought; therefore, the government will have to provide emergency aid.','Doğru. “Kaybetmiş olmaları muhtemel” → may have lost; “zorunda kalacak” → will have to.'],
+        ['The farmers may lose most of their crops this year because of the drought; therefore, the government had to provide emergency aid.','May lose gelecek ihtimalidir ve had to geçmiştir; ikisi de kaynakla uyuşmaz.'],
+        ['The farmers needn’t have lost most of their crops this year because of the drought; therefore, the government must provide emergency aid.','Needn’t have “kaybetmelerine gerek yoktu” demek olur; kaynak bunu söylemiyor.']],a:2,rule:'“-miş olmaları muhtemel” → may / might have + V3 · “zorunda kalacak” → will have to'},
+
+      /* Paragraf tamamlama */
+      {s:'paragraph',focus:'component · launch · faulty',q:'Space exploration is full of risks. ---- For that reason, engineers must test every component several times before a launch. Even so, some failures cannot be predicted, which is why every mission includes a plan for emergencies.',o:[
+        ['The planets in our solar system differ greatly in size and temperature.','Konudan sapar; sonraki “For that reason” ile bağlanmaz.'],
+        ['Many children dream of becoming astronauts when they grow up.','Konuyla ilgisi vardır ama testlerin nedenini açıklamaz.'],
+        ['A single faulty component can destroy a mission that took years to prepare.','Doğru. “For that reason” ifadesinin nedenini sağlar: küçük bir arıza büyük kayba yol açabilir.'],
+        ['The first satellite was launched more than sixty years ago.','Tarihçe verir; testlerin nedenini açıklamaz.'],
+        ['Space agencies have recently reduced the number of tests to save money.','Sonraki cümleyle çelişir; testlerin çok yapılması gerektiğini söylüyor.']],a:2,rule:'“For that reason” bir önceki cümlede neden arar.'},
+
+      /* Anlam bütünlüğünü bozan cümle */
+      {s:'irrelevant',sabit:true,focus:'biodiversity · disappear',q:'(I) Biodiversity, the variety of living things in an area, is essential for healthy ecosystems. (II) A forest with many species can recover faster after a drought or a disease outbreak. (III) For this reason, scientists believe that protecting biodiversity should be a priority. (IV) The oldest known tree in the world is a bristlecone pine that is nearly five thousand years old. (V) If species disappear, the remaining ones may not be able to perform the roles they once played.',o:[
+        ['I','Paragrafın ana konusunu (biyolojik çeşitliliğin önemi) tanıtır.'],
+        ['II','Çeşitliliğin faydasını gösteren bir örnek verir.'],
+        ['III','“For this reason” ile önceki bilgiden sonuca varır.'],
+        ['IV','Doğru. Ağaçtan söz etse de biyolojik çeşitliliğin önemiyle ilgisi yoktur; III ile V arasındaki akışı bozar.'],
+        ['V','Türlerin kaybolmasının sonuçlarını anlatarak konuyu destekler.']],a:3,rule:'Ayrık cümle çoğu zaman konu dışı değildir: aynı konudan (ağaçlar) söz eder ama paragrafın ana fikrine hizmet etmez.'},
+
+      /* Diyalog (yalnız YDS) */
+      {s:'dialogue',focus:'alignment · available · condition',q:'Lab assistant: Professor, the samples are ready. Should I start the analysis now?\nProfessor: ----\nLab assistant: I see. I’ll ask the technician to check the alignment of the instruments first.',o:[
+        ['Yes, please start. Everything has been calibrated, so you needn’t check anything.','Sonraki replikte asistan alet ayarını kontrol ettireceğini söylüyor; bu cevapla çelişir.'],
+        ['Not yet. The equipment hasn’t been calibrated, so you had better wait.','Doğru. Beklemeyi öneriyor; asistanın “ayarı önce kontrol ettireceğim” cevabıyla uyumlu.'],
+        ['You should have started yesterday; now it is too late to begin.','Sonraki replikle uyuşmaz; analiz için geç kalındığı söylenmiyor.'],
+        ['It doesn’t matter at all; the analysis could be done without any equipment.','Cihazsız analiz mantıksızdır ve sonraki replikle çelişir.'],
+        ['I’m afraid you can’t have started it; the samples haven’t arrived yet.','Örneklerin hazır olduğu belirtilmişti; cevap çelişir.']],a:1,rule:'Diyalogda boşluktan sonraki replik (check the alignment first) doğru cevabın anahtarıdır.'},
+
+      /* Yakın anlam (yalnız YDS) */
+      {s:'restatement',focus:'fragile · damage · protect',q:'We made a mistake by not protecting the fragile instruments properly, and now they are badly damaged.',o:[
+        ['We needn’t have protected the fragile instruments properly.','Gereksiz yere korumuş olmayı anlatır; kaynak hata yapıldığını söylüyor.'],
+        ['We must have protected the fragile instruments properly.','Koruduklarını çıkarım yapar; kaynak tersini söylüyor.'],
+        ['We should have protected the fragile instruments properly.','Doğru. “Hata yaptık, korumadık” ≈ should have protected: yapılması gerekirdi ama yapılmadı.'],
+        ['We may protect the fragile instruments properly next time.','Gelecek ihtimalidir; kaynak geçmişteki hatayı anlatıyor.'],
+        ['We ought not to have protected the fragile instruments properly.','Korumamaları gerektiğini söyler; anlam tersine döner.']],a:2,rule:'“We made a mistake by not doing” ≈ “We should have done”.'},
+
+      /* Okuma */
+      {s:'reading',focus:'precipitation · release · gradually',q:'According to the passage, wetlands reduce the risk of floods because they ----.',o:[
+        ['filter the pollution from the water that passes through them','Filtreleme kirliliği azaltır; sel riskiyle ilgili değildir.'],
+        ['cover most of the Earth’s land surface','Parça tersini söylüyor: yüzeyin yaklaşık yüzde altısını kaplarlar.'],
+        ['absorb heavy rainfall and let the water out slowly','Doğru. “They absorb heavy precipitation … and release the water gradually.”'],
+        ['provide space for agriculture and housing','Parçada bu, sulak alanların kurutulma nedenidir.'],
+        ['are home to many species of birds, fish and insects','Biyolojik çeşitlilikle ilgilidir; sel riskiyle ilgisi kurulmuyor.']],a:2,rule:'precipitation ≈ rainfall, release gradually ≈ let out slowly: doğru seçenek parçadaki ifadeyi eş anlamlılarla yeniden söyler.'},
+      {s:'reading',focus:'agriculture · drained',q:'It is understood from the passage that many wetlands were drained because ----.',o:[
+        ['they were thought to be of no use and the land was needed for other purposes','Doğru. “Regarded as useless land … drained to provide space for agriculture and housing.”'],
+        ['they caused severe floods in nearby cities','Parça sel sorununun sulak alanların kaybından sonra arttığını söylüyor.'],
+        ['their water was too polluted for birds and fish to survive','Parçada böyle bir bilgi yok.'],
+        ['governments wanted to protect their biodiversity','Parça tersini söylüyor: koruma yeni bir görüş.'],
+        ['scientists recommended draining them to improve drinking water','Parça içme suyunun sulak alanların kaybıyla kötüleştiğini söylüyor.']],a:0,rule:'Çıkarım sorularında parçanın verdiği nedenleri (useless land, space for agriculture) eş anlamlılarla bul.'},
+      {s:'reading',focus:'severe · deteriorate · consequence',q:'According to the passage, in regions where wetlands have disappeared, ----.',o:[
+        ['floods have become more severe and the quality of drinking water has deteriorated','Doğru. “Floods have become more severe, and the quality of drinking water has deteriorated.”'],
+        ['the amount of precipitation has increased significantly','Parçada yağış artışından söz edilmiyor.'],
+        ['agriculture has declined because of a shortage of farmland','Parçada tarımın azaldığı söylenmiyor; tersine tarım için kurutuldukları belirtiliyor.'],
+        ['many new species of birds have begun to flourish','Parça biyolojik çeşitliliğin zarar gördüğünü ima eder, gelişmesini değil.'],
+        ['cities downstream have received cleaner water supplies','Parçaya göre temiz su sulak alanlar sayesinde sağlanır; kaybolduklarında tersi olur.']],a:0,rule:'Sonuç sorularında “The consequences have been serious” sonrası cümlelere bak.'},
+      {s:'reading',focus:'protect · restore · benefit',q:'The main purpose of the passage is to ----.',o:[
+        ['compare the costs of draining and restoring wetlands in different countries','Maliyetten yalnız son cümlede kısaca söz ediliyor; ülke karşılaştırması yok.'],
+        ['prove that wetlands are the most important ecosystem on Earth','Parça “en önemli” iddiasında bulunmuyor.'],
+        ['describe how marshes, swamps and peat bogs differ from one another','Üç tür yalnız örnek olarak sayılıyor; farkları anlatılmıyor.'],
+        ['argue that governments should stop agriculture near water','Parçada böyle bir görüş yok.'],
+        ['explain why wetlands are valuable and why they should be protected','Doğru. Parça faydalarını, kaybın sonuçlarını ve korunma gerekçesini anlatıyor.']],a:4,rule:'Ana amaç sorusunda parçanın bütününü kapsayan seçeneği seç; tek bir ayrıntıya ya da kesinlik bildiren ifadelere (prove, most important) dikkat et.'}
+    ]
+  };
+
 
   window.registerBolum(2, {
     1: () => S.kelimeKismi({bolum:2, kisim:1, words:kelimeler[1]}),
     2: () => S.kelimeKismi({bolum:2, kisim:2, words:kelimeler[2]}),
     3: () => S.kelimeKismi({bolum:2, kisim:3, words:kelimeler[3]}),
     4: () => S.kelimeKismi({bolum:2, kisim:4, words:kelimeler[4]}),
-    5: () => S.testKismi(kisim5)
+    5: () => S.testKismi(kisim5),
+    6: () => S.testKismi(kisim6),
+    7: () => S.testKismi(kisim7)
   });
 })();

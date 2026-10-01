@@ -124,5 +124,9 @@ Bölüm konuları `data/manifest.js` içinde (2: Modals, 3: Passive, 4: Conditio
 
 ## Durum (2026-10-01)
 
-- Bölüm 1 tamam ve yayında (yeni şablonla, 7 kısım).
-- **Sıradaki iş: Bölüm 2 — Modals.** Kullanıcı kitabındaki 100 kelimeyi gönderecek.
+- Bölüm 1 ve Bölüm 2 (Modals) tamam ve yayında (7 kısım).
+- **Sıradaki iş: Bölüm 3 — Active & Passive Voice.** Kullanıcı kitabındaki 100 kelimeyi gönderecek.
+- Bölüm 2 notları: çok kelimeli kelimelerde (`lack of`, `focus on`, `prone to`, `give rise to`,
+  `cut down on`, `contribute to`) kart örneği (`ex`) ifadeyi aynen içermeli. `tools/tarayici.js`
+  `KISIMLAR=5,6 node tools/tarayici.js <no> <klasör>` ile yalnız seçili kısımları çözer.
+  Not: dosyalar CRLF olabilir (`data/manifest.js`); düzenlerken satır sonlarına dikkat et.
