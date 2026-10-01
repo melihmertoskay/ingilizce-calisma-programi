@@ -18,7 +18,7 @@ const {chromium} = require(execSync('npm root -g').toString().trim() + '/playwri
   page.on('pageerror', e => hatalar.push('pageerror: ' + e.message));
   page.on('console', m => { if(m.type() === 'error') hatalar.push('console: ' + m.text()); });
 
-  for(const k of [1, 2, 3, 4, 5, 6, 7]){
+  for(const k of (process.env.KISIMLAR||"1,2,3,4,5,6,7").split(",").map(Number)){
     await page.goto('about:blank');
     await page.goto(url(k));
     const frameEl = await page.waitForSelector('#contentFrame');
