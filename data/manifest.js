@@ -43,6 +43,12 @@ window.PROGRAM = {
       5: ['12 Tenses', 'Özne–Yüklem Uyumu', 'Yardımcı Fiiller', 'Zaman İfadeleri', 'Karşılaştırmalı Seçim', '50 Soru'],
       6: ['Tenses + 100 Kelime', 'Cümle Tamamlama', 'Kısa Diyalog', 'Paragraf', 'Hata Bulma', 'Kısa Okuma', '28 Soru'],
       7: ['YDS / YÖKDİL', 'Gerçek Sınav Seviyesi', '5 Seçenek', 'Süre Takibi', '10 Soru Türü', '25 Soru']
+    },
+    2: {
+      1: ['ignore', 'common', 'hazardous', 'obvious', 'pollution', 'partially', 'enormous', 'develop', 'task', 'decrease', 'impact', 'solely', 'regulate', 'lack of', 'benefit', 'condition', 'available', 'assemble', 'focus on', 'precipitation', 'fail', 'severe', 'prone to', 'alignment', 'proper'],
+      2: ['support', 'crucial', 'trait', 'concerned', 'requirement', 'deteriorate', 'flourish', 'adequate', 'give rise to', 'attempt', 'deadly', 'consequence', 'wreck', 'constructive', 'promote', 'drought', 'incidence', 'release', 'accurately', 'essential', 'application', 'biodiversity', 'gradually', 'rapid', 'component'],
+      3: ['ignition', 'alter', 'disappear', 'acquire', 'moderate', 'emit', 'inconsistent', 'implement', 'highlight', 'facilitate', 'exist', 'melt', 'entirely', 'indefinitely', 'debate', 'protect', 'lunar', 'incredible', 'outbreak', 'neglect', 'disrupt', 'aid', 'remarkable', 'cease', 'cut down on'],
+      4: ['discover', 'faulty', 'damage', 'prevent', 'comprise', 'plentiful', 'confine', 'provide', 'planet', 'distinguish', 'consensus', 'delay', 'efficient', 'exposure', 'fragile', 'majority', 'notorious', 'contribute to', 'shortage', 'generate', 'poisonous', 'create', 'previous', 'tremendous', 'irrigation']
     }
   }
 };
