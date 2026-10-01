@@ -73,8 +73,8 @@
         clue:'“___ from” kalıbı, bir şeyden yarar görmeyi anlatır.',haric:['fail']},
       {no:16,w:'condition',pos:'noun',tr:'koşul; durum',syn:'state, situation, circumstance',diger:'şart: on condition that = ... şartıyla · rahatsızlık: a heart condition',
         ex:'The condition of the old building was so bad that it had to be closed.',trEx:'Eski binanın durumu o kadar kötüydü ki kapatılması gerekti.',
-        q:'Plants will die if the weather ___ in the greenhouse becomes too cold.',trQ:'Serada hava koşulları çok soğuk olursa bitkiler ölür.',
-        clue:'Seranın içindeki durum, yani koşullar anlatılıyor.',haric:['task']},
+        q:'The car is twenty years old, but it is still in very good ___.',trQ:'Araba yirmi yaşında ama hâlâ çok iyi durumda.',
+        clue:'in good condition = iyi durumda; eski arabanın hâlinden söz ediliyor.',haric:['task']},
       {no:17,w:'available',pos:'adj',tr:'mevcut; elde olan; ulaşılabilir',syn:'accessible, obtainable, on hand',
         ex:'Free medical help is available to everyone who lives in this district.',trEx:'Ücretsiz tıbbi yardım, bu bölgede yaşayan herkes için mevcuttur.',
         q:'The new book will be ___ in all bookshops from next Monday.',trQ:'Yeni kitap gelecek pazartesiden itibaren bütün kitapçılarda bulunabilir olacak.',
@@ -159,7 +159,7 @@
         clue:'Yendiğinde ölüme yol açabilecek mantarlar anlatılıyor.'},
       {no:37,w:'consequence',pos:'noun',tr:'sonuç; netice',syn:'result, outcome, effect',diger:'as a consequence: bunun sonucunda · önem (of no consequence = önemsiz)',
         ex:'One consequence of the long drought was a serious shortage of food.',trEx:'Uzun kuraklığın bir sonucu, ciddi bir gıda kıtlığı oldu.',
-        q:'Skipping breakfast every day can have bad ___ for your health.',trQ:'Her gün kahvaltıyı atlamak sağlığın için kötü sonuçlar doğurabilir.',
+        q:'One ___ of skipping breakfast is feeling tired and hungry before lunch.',trQ:'Kahvaltıyı atlamanın bir sonucu, öğle yemeğinden önce yorgun ve aç hissetmektir.',
         clue:'Bir davranışın ardından gelen sonuç anlatılıyor.',haric:['incidence']},
       {no:38,w:'wreck',pos:'noun',tr:'enkaz; harabe; kaza',syn:'ruin, remains, crash',diger:'(fiil) mahvetmek, yıkmak · a car wreck: araba kazası',
         ex:'Divers found the wreck of an ancient ship at the bottom of the sea.',trEx:'Dalgıçlar denizin dibinde eski bir geminin enkazını buldu.',
@@ -269,8 +269,8 @@
         clue:'Hiçbir kısmın dışarıda kalmaması, hepsinin gerçek olması anlatılıyor.',haric:['indefinitely']},
       {no:64,w:'indefinitely',pos:'adv',tr:'süresiz olarak; belirsiz olarak',syn:'for an unlimited time, without an end date',
         ex:'The match was postponed indefinitely because of the heavy snow.',trEx:'Maç, yoğun kar nedeniyle süresiz olarak ertelendi.',
-        q:'The airport will stay closed ___ until the storm is over.',trQ:'Havalimanı fırtına bitene kadar süresiz olarak kapalı kalacak.',
-        clue:'Ne zaman biteceği belli olmayan bir süre anlatılıyor.',haric:['entirely']},
+        q:'The airport will stay closed ___; nobody knows when it will open again.',trQ:'Havalimanı süresiz olarak kapalı kalacak; ne zaman yeniden açılacağını kimse bilmiyor.',
+        clue:'“Ne zaman açılacağını kimse bilmiyor”: bitişi belli olmayan bir süre anlatılıyor.',haric:['entirely']},
       {no:65,w:'debate',pos:'noun',tr:'tartışma; münakaşa',syn:'discussion, argument, dispute',diger:'(fiil) tartışmak, görüşmek',
         ex:'There is a long debate about the use of nuclear energy.',trEx:'Nükleer enerjinin kullanımı hakkında uzun bir tartışma var.',
         q:'The students took part in a lively ___ about the future of their city.',trQ:'Öğrenciler şehirlerinin geleceği hakkında canlı bir tartışmaya katıldı.',
@@ -518,15 +518,15 @@
         ['can’t','Can’t imkânsızlık bildirir; cümle ise sadece olasılıktan söz ediyor.']],a:0},
       {s:'possibility',tag:'could · genel ihtimal',q:'Extremely high levels of pollution ___ give rise to serious diseases.',tr:'Çok yüksek seviyedeki kirlilik ciddi hastalıklara yol açabilir.',o:[
         ['could','Doğru. Teorik/genel ihtimal could ile ifade edilir.'],
-        ['did','Did + give: Did’den sonra V1 gelir ama anlam “yol açtı” olur.'],
-        ['are','Are give hatalıdır; edilgen yapı da anlamlı değil.'],
-        ['have','Have + give hatalıdır; have to gerekirdi ve anlam değişirdi.']],a:0},
+        ['mustn’t','Mustn’t yasak bildirir; kirliliğin hastalığa yol açması bir yasak konusu değil, bir ihtimaldir.'],
+        ['needn’t','Needn’t “gerek yok” demektir; cümle bir ihtimal anlatıyor.'],
+        ['had better','Had better birine verilen tavsiyedir; kirlilik gibi bir özneyle ihtimal anlatmaz.']],a:0},
       {s:'possibility',tag:'can · genel olasılık',q:'Fog can ___ air travel at any time of the year.',tr:'Sis yılın her zamanında hava ulaşımını aksatabilir.',o:[
         ['disrupt','Doğru. Can + V1: genel olasılık.'],
         ['disrupts','Can’den sonra fiil -s almaz.'],
         ['disrupting','Can’den sonra V-ing gelmez.'],
         ['to disrupt','Can’den sonra to gelmez.']],a:0},
-      {s:'possibility',tag:'could · öneri',q:'You ___ ask your teacher to explain the task again.',tr:'Öğretmenine görevi yeniden açıklamasını söyleyebilirsin.',o:[
+      {s:'possibility',tag:'could · öneri',q:'You ___ ask your teacher to explain the task again.',tr:'Öğretmeninden görevi yeniden açıklamasını isteyebilirsin.',o:[
         ['mustn’t','Mustn’t yasak bildirir.'],
         ['could','Doğru. Zorunluluk içermeyen öneri: could + V1.'],
         ['can’t','Can’t yapılamayacağını söyler; cümle öneri veriyor.'],
@@ -563,7 +563,7 @@
         ['ought','Ought’tan sonra to gerekir.'],
         ['should to','Should’dan sonra to gelmez.'],
         ['ought for','Ought for diye bir yapı yoktur.']],a:0},
-      {s:'obligation',tag:'had better',q:'You ___ see a doctor now, because the pain may deteriorate.',tr:'Şimdi bir doktora görünsen iyi olur, çünkü ağrı kötüleşebilir.',o:[
+      {s:'obligation',tag:'had better',q:'You ___ see a doctor now, because your condition may deteriorate.',tr:'Şimdi bir doktora görünsen iyi olur, çünkü durumun kötüleşebilir.',o:[
         ['had better','Doğru. Had better + V1: yapılmazsa kötü sonuç doğabilecek tavsiye.'],
         ['have better','Had better kalıbı sabittir; have better denmez.'],
         ['would better','Would better diye bir kalıp yoktur.'],
@@ -740,11 +740,11 @@
       sentence: {title:'Cümle Tamamlama', sub:'Modalin anlamını ve zamanını birlikte değerlendir.'},
       dialogue: {title:'Kısa Diyaloglar', sub:'Konuşma bağlamının gerektirdiği modali seç.'},
       paragraph: {title:'Paragraf Boşluk Doldurma', sub:'Aynı metindeki anlam akışını beş boşluk boyunca koru.',
-        passage:'The village has suffered from a severe <mark>drought</mark> for three years. Last summer, families <b>[1]</b> ___ walk ten kilometers to find <mark>available</mark> water. Now engineers have built an <mark>irrigation</mark> system, so farmers <b>[2]</b> ___ water their fields again. However, the authorities <b>[3]</b> ___ have acted earlier, because the <mark>consequence</mark> of the delay was a serious <mark>shortage</mark> of food. Next week, technicians will <mark>assemble</mark> new pumps, but heavy rain <b>[4]</b> ___ <mark>delay</mark> their arrival. Whatever happens, the villagers <b>[5]</b> ___ <mark>ignore</mark> the water rules.'},
+        passage:'The village has suffered from a severe drought for three years. Last summer, families <b>[1]</b> ___ walk ten kilometers to find available water. Now engineers have built an irrigation system, so farmers <b>[2]</b> ___ water their fields again. However, the authorities <b>[3]</b> ___ have acted earlier, because the consequence of the delay was a serious shortage of food. Next week, technicians will assemble new pumps, but heavy rain <b>[4]</b> ___ delay their arrival. Whatever happens, the villagers <b>[5]</b> ___ ignore the water rules.'},
       error: {title:'Hata Bulma', sub:'Altı çizili dört bölümden grammar hatası taşıyanı seç.'},
       meaning: {title:'Anlam ve Modal İlişkisi', sub:'Verilen durumu en doğru ve doğal biçimde anlatan cümleyi bul.', tekSutun:true},
       reading: {title:'Kısa Okuma', sub:'Parçayı oku; soruları parçadaki bilgiye dayanarak cevapla.', tekSutun:true,
-        passage:'For years, the residents of a small mountain town have been <mark>concerned</mark> about the river that <mark>provides</mark> their water. In the past decade, the flow has <mark>decreased</mark> <mark>gradually</mark>, and last summer a severe <mark>drought</mark> made the situation worse. Experts say that a <mark>lack of</mark> <mark>precipitation</mark> may not be the only cause; the old pipes might <mark>release</mark> large amounts of water before it reaches the houses. Engineers must <mark>focus on</mark> repairing the system first. The town council cannot <mark>ignore</mark> the problem any longer. It should have acted earlier, but it still has time to <mark>protect</mark> the river’s future.'}
+        passage:'For years, the residents of a small mountain town have been concerned about the river that provides their water. In the past decade, the flow has decreased gradually, and last summer a severe drought made the situation worse. Experts say that a lack of precipitation may not be the only cause; the old pipes might release large amounts of water before it reaches the houses. Engineers must focus on repairing the system first. The town council cannot ignore the problem any longer. It should have acted earlier, but it still has time to protect the river’s future.'}
     },
     questions: [
       /* Cümle tamamlama */
@@ -975,7 +975,7 @@
         ['don’t have to','Doğru. Zorunluluk sona erdi ama giymek serbest: don’t have to.'],
         ['shouldn’t','Shouldn’t giymemenin doğru olduğunu söyler; “choose to” ile uyuşmaz.'],
         ['couldn’t','Couldn’t geçmişte yapamamayı anlatır; “any longer” şimdiki durumu gösteriyor.']],a:2,rule:'Zorunluluğun sona ermesi ≠ yasak: don’t have to ile mustn’t’ı ayır.'},
-      {s:'grammar',focus:'severe · bridge · damage',q:'The bridge was built to last a century, yet the storm was so severe that it ---- collapsed; luckily, only the old railing was damaged.',tr:'Köprü bir asır dayanacak şekilde yapılmıştı, ancak fırtına o kadar şiddetliydi ki çökebilirdi; neyse ki yalnızca eski korkuluk zarar gördü.',o:[
+      {s:'grammar',focus:'severe · bridge · damage',q:'The bridge was built to last a century, yet the storm was so severe that the bridge ---- collapsed; luckily, only the old railing was damaged.',tr:'Köprü bir asır dayanacak şekilde yapılmıştı, ancak fırtına o kadar şiddetliydi ki çökebilirdi; neyse ki yalnızca eski korkuluk zarar gördü.',o:[
         ['must have','Must have collapsed “çökmüş olmalı” der; köprünün ayakta kaldığı belli.'],
         ['could have','Doğru. Olabilirdi ama olmadı: could have + V3.'],
         ['can’t have','Can’t have collapsed “çökmüş olamaz” der; “so severe that” vurgusuyla uyuşmaz.'],

@@ -77,6 +77,8 @@ Bölüm konuları `data/manifest.js` içinde (2: Modals, 3: Passive, 4: Conditio
 - Hata bulma sorularında dört bölüm de `[[…]]` ile altı çizilir ve `sabit: true`.
 - Kısa okuma parçası hedef kelimelerle (≈100–130 kelime), 3 kolay soru. Parçalar
   ilerleyen bölümlerde yavaş yavaş uzar (≈ Bölüm 10'da sınav uzunluğu).
+- Paragraf ve okuma metinlerinde hedef kelimeleri **vurgulama** (`<mark>`, `==…==`
+  kullanma). Kullanıcı metinlerin sınavdaki gibi düz görünmesini istedi.
 
 **Kısım 7 (gerçek sınav)**
 - 5 seçenek; **bütün seçenekler dilbilgisi açısından kurallı** olmalı, yalnız anlam,
