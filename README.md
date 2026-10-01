@@ -24,6 +24,9 @@ index.html         Kabuk: menü, ana sayfa, tema, ilerleme kaydı, içerik çer�
 data/manifest.js   Bölüm/kısım künyesi ve hazır kısımların önizleme etiketleri
 data/sablon.js     Ortak şablon: kısımların HTML'ini ve etkileşimini üretir
 data/bolum-1.js    Bölüm 1 verisi (yalnız veri)
+tools/dogrula.js   Bölüm verisini doğrular:      node tools/dogrula.js <bölümNo>
+tools/tarayici.js  Kısımları Chromium'da çözer:  node tools/tarayici.js <bölümNo> <klasör>
+CLAUDE.md          Çalışma kuralları, içerik ilkeleri ve sıradaki iş
 ```
 
 `index.html` yalnızca kabuğu içerir. Bir kısım ilk kez açıldığında ilgili
